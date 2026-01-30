@@ -315,7 +315,6 @@
     }
 
     form.addEventListener('submit', function(e) {
-      e.preventDefault();
       clearErrors();
       var name = nameInput ? nameInput.value.trim() : '';
       var email = emailInput ? emailInput.value.trim() : '';
@@ -338,48 +337,27 @@
         valid = false;
       }
 
-      if (!valid) return;
+      if (!valid) {
+        e.preventDefault();
+        return;
+      }
 
       var action = form.getAttribute('action');
       if (!action || action.indexOf('YOUR_FORM_ID') !== -1) {
+        e.preventDefault();
         showFieldError('email-error', 'Form is not configured. Replace YOUR_FORM_ID in contact.html with your Formspree form ID.');
         return;
       }
 
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending…';
-      }
-
-      var body = new FormData(form);
-      fetch(action, {
-        method: 'POST',
-        body: body,
-        headers: { Accept: 'application/json' }
-      })
-        .then(function(r) {
-          if (r.ok) {
-            if (successEl) {
-              successEl.hidden = false;
-              successEl.setAttribute('role', 'status');
-            }
-            form.reset();
-          } else {
-            return r.json().then(function(data) {
-              throw new Error(data.error || 'Something went wrong. Please try again.');
-            });
-          }
-        })
-        .catch(function(err) {
-          showFieldError('email-error', err.message || 'Failed to send. Please try again or email support@kavniktech.com.');
-        })
-        .finally(function() {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Send Message';
-          }
-        });
+      // Valid: allow normal form POST to Formspree (no fetch — avoids "Load failed" from blockers/CORS)
+      // Browser will submit and navigate to Formspree thank-you page or your redirect URL.
     });
+
+    // If Formspree redirected back with ?sent=1, show success message (set redirect in Formspree to contact.html?sent=1)
+    if (successEl && typeof window.location !== 'undefined' && window.location.search.indexOf('sent=1') !== -1) {
+      successEl.hidden = false;
+      successEl.setAttribute('role', 'status');
+    }
   }
 
   // ===== Add Ripple Animation CSS =====
