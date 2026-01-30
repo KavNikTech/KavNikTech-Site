@@ -1,0 +1,4 @@
+http://kavniktech.com/    https://www.kavniktech.com/   301!
+http://kavniktech.com/*   https://www.kavniktech.com/:splat   301!
+https://kavniktech.com/   https://www.kavniktech.com/   301!
+https://kavniktech.com/*  https://www.kavniktech.com/:splat   301!
