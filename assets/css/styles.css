@@ -989,9 +989,21 @@ body::before {
     display: none;
   }
 
+  /* Disable fade-in on mobile — content must always be visible */
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   .nk-header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Allow header items to wrap so nav goes to its own row */
+  .nk-header .nk-container {
+    flex-wrap: wrap;
   }
 
   .nk-card {
@@ -1021,44 +1033,45 @@ body::before {
     margin-left: 0 !important;
   }
 
-  /* Push theme toggle + hamburger to the right on mobile */
+  /* Push theme toggle + hamburger to the right */
   .nk-theme-toggle {
     margin-left: auto;
   }
 
-  /* Mobile nav: hidden by default, visible when .open */
-  .nk-nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: var(--glass-bg);
-    flex-direction: column;
-    padding: 20px;
-    gap: 12px;
-    border-bottom: 1px solid var(--border-light);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
-    z-index: 99;
-  }
-
-  .nk-nav.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
+  /* Gap between theme toggle and hamburger */
   .nk-nav-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 10px;
+  }
+
+  /* Mobile nav: push-down menu that moves content below */
+  .nk-nav {
+    width: 100%;
+    order: 10;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 4px;
+    gap: 2px;
+    transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease;
+  }
+
+  .nk-nav.open {
+    max-height: 320px;
+    opacity: 1;
+    padding: 12px 4px 8px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .nk-nav a {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
   }
 
   .grid.cols-2 {
@@ -1089,16 +1102,40 @@ body::before {
 }
 
 @media (max-width: 600px) {
+  /* Tighter container padding on small screens */
+  .nk-container {
+    padding: 16px;
+  }
+
+  .nk-header .nk-container {
+    padding: 12px 16px;
+  }
+
   .nk-hero {
-    padding: 48px 0 56px;
+    padding: 40px 0 48px;
+  }
+
+  .nk-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    margin-bottom: 16px;
+  }
+
+  .lead {
+    font-size: 1rem;
+    margin-bottom: 24px;
   }
 
   .nk-section {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .nk-card {
-    padding: 28px 24px;
+    padding: 24px 20px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
   }
 
   .device-stack {
@@ -1107,54 +1144,100 @@ body::before {
 
   .nk-highlights {
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 32px;
+    gap: 10px;
+    margin-top: 28px;
   }
 
   .nk-highlight-item {
-    padding: 20px 10px;
+    padding: 16px 8px;
   }
 
   .nk-highlight-number {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .nk-highlight-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .nk-values-grid {
-    margin-top: 32px;
+    margin-top: 28px;
+    gap: 12px;
   }
 
   .nk-value-item {
-    padding: 24px;
+    padding: 20px;
+  }
+
+  .nk-value-item h4 {
+    font-size: 1rem;
   }
 
   .nk-mission-block {
-    margin-top: 32px;
+    margin-top: 28px;
   }
 
   .nk-mission-block blockquote {
-    padding: 24px 20px;
+    padding: 20px 16px;
+    font-size: 0.95rem;
   }
 
   .nk-availability {
     flex-direction: column;
     gap: 4px;
+    font-size: 0.8rem;
   }
 
   .nk-section-heading {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .nk-section-heading h2,
   .nk-section-heading h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .nk-cta-card {
-    padding: 40px 24px;
+    padding: 32px 20px;
+  }
+
+  /* Privacy & content pages — mobile typography */
+  .nk-privacy h1 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  .nk-privacy h2 {
+    font-size: 1.2rem;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  .nk-privacy h3 {
+    font-size: 1.05rem;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .nk-privacy p,
+  .nk-privacy ul {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .nk-privacy ul {
+    padding-left: 20px;
+  }
+
+  /* Footer tighter on small screens */
+  .nk-footer {
+    padding: 24px 0;
+    font-size: 0.85rem;
+  }
+
+  .nk-footer-nav {
+    gap: 12px;
+    flex-wrap: wrap;
   }
 }
 
