@@ -1021,6 +1021,11 @@ body::before {
     margin-left: 0 !important;
   }
 
+  /* Push theme toggle + hamburger to the right on mobile */
+  .nk-theme-toggle {
+    margin-left: auto;
+  }
+
   /* Mobile nav: hidden by default, visible when .open */
   .nk-nav {
     position: fixed;
