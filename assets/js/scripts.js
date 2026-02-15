@@ -295,6 +295,11 @@
     var successEl = document.getElementById('form-success');
     var submitBtn = document.getElementById('contact-submit');
 
+    // Bot protection: record page load time (bots submit too fast)
+    var loadedAtField = document.getElementById('form-loaded-at');
+    var formLoadTime = Date.now();
+    if (loadedAtField) loadedAtField.value = formLoadTime;
+
     function clearErrors() {
       showFieldError('name-error', '');
       showFieldError('email-error', '');
@@ -341,23 +346,23 @@
         valid = false;
       }
 
+      // Bot protection: reject if submitted faster than 3 seconds (no human types that fast)
+      var elapsed = Date.now() - formLoadTime;
+      if (elapsed < 3000) {
+        e.preventDefault();
+        return; // silently block — likely a bot
+      }
+
       if (!valid) {
         e.preventDefault();
         return;
       }
 
-      var action = form.getAttribute('action');
-      if (!action || action.indexOf('YOUR_FORM_ID') !== -1) {
-        e.preventDefault();
-        showFieldError('email-error', 'Form is not configured. Replace YOUR_FORM_ID in contact.html with your Formspree form ID.');
-        return;
-      }
-
-      // Valid: allow normal form POST to Formspree (no fetch — avoids "Load failed" from blockers/CORS)
-      // Browser will submit and navigate to Formspree thank-you page or your redirect URL.
+      // Valid: allow normal form POST to Netlify Forms.
+      // Browser submits and Netlify redirects to the action URL (/contact.html?sent=1).
     });
 
-    // If Formspree redirected back with ?sent=1, show success message (set redirect in Formspree to contact.html?sent=1)
+    // If Netlify redirected back with ?sent=1, show success message
     if (successEl && typeof window.location !== 'undefined' && window.location.search.indexOf('sent=1') !== -1) {
       successEl.hidden = false;
       successEl.setAttribute('role', 'status');
@@ -402,11 +407,41 @@
     initDeviceAnimations();
     initAppCardEffects();
     addRippleAnimation();
+    deobfuscateEmails();
     
     // Add fade-in class to hero content
     const heroContent = document.querySelector('.nk-hero-content') || document.querySelector('.nk-hero-copy');
     if (heroContent) {
       heroContent.classList.add('fade-in', 'visible');
+    }
+  }
+
+  // ===== Email obfuscation — prevents bot harvesting =====
+  function deobfuscateEmails() {
+    var els = document.querySelectorAll('[data-em]');
+    for (var i = 0; i < els.length; i++) {
+      var u = els[i].getAttribute('data-em');   // e.g. "support"
+      var d = els[i].getAttribute('data-dom');  // e.g. "kavniktech.com"
+      if (u && d) {
+        var addr = u + '@' + d;
+        els[i].setAttribute('href', 'mailto:' + addr);
+        if (els[i].textContent.indexOf('@') === -1 && els[i].textContent.trim() === '') {
+          els[i].textContent = addr;
+        }
+        // Also replace placeholder text in elements that show the email
+        if (els[i].textContent === '[email]') {
+          els[i].textContent = addr;
+        }
+      }
+    }
+    // Also fill spans that display the address
+    var spans = document.querySelectorAll('[data-email-display]');
+    for (var j = 0; j < spans.length; j++) {
+      var su = spans[j].getAttribute('data-em');
+      var sd = spans[j].getAttribute('data-dom');
+      if (su && sd) {
+        spans[j].textContent = su + '@' + sd;
+      }
     }
   }
 
