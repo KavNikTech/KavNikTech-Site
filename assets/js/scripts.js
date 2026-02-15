@@ -3,18 +3,21 @@
  * Features: Theme toggle, smooth animations, mobile navigation, scroll effects
  */
 
-/**
- * Enhanced JavaScript for KavNik Tech Website
- * Features: Theme toggle, smooth animations, mobile navigation, scroll effects
- */
-
 (function() {
   'use strict';
+
+  // ===== Safe localStorage helpers =====
+  function storageGet(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function storageSet(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) { /* private mode or quota */ }
+  }
 
   // ===== Theme Toggle =====
   function initThemeToggle() {
     const themeToggle = document.querySelector('.nk-theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const currentTheme = storageGet('theme') || 'light';
     
     // Set initial theme
     document.documentElement.setAttribute('data-theme', currentTheme);
@@ -26,12 +29,12 @@
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+        storageSet('theme', newTheme);
         updateThemeIcon(newTheme);
         
         // Add animation effect
         themeToggle.style.transform = 'rotate(360deg)';
-        setTimeout(() => {
+        setTimeout(function() {
           themeToggle.style.transform = '';
         }, 300);
       });
@@ -308,7 +311,8 @@
         }
       });
       emailInput.addEventListener('input', function() {
-        if (document.getElementById('email-error').textContent) {
+        var errEl = document.getElementById('email-error');
+        if (errEl && errEl.textContent) {
           if (validateEmail(this.value.trim())) showFieldError('email-error', '');
         }
       });
@@ -400,9 +404,9 @@
     addRippleAnimation();
     
     // Add fade-in class to hero content
-    const heroCopy = document.querySelector('.nk-hero-copy');
-    if (heroCopy) {
-      heroCopy.classList.add('fade-in', 'visible');
+    const heroContent = document.querySelector('.nk-hero-content') || document.querySelector('.nk-hero-copy');
+    if (heroContent) {
+      heroContent.classList.add('fade-in', 'visible');
     }
   }
 
