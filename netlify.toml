@@ -1,6 +1,17 @@
 [build]
   publish = "."
 
+# Ensure crawlers can always fetch these files at root
+[[redirects]]
+  from = "/app-ads.txt"
+  to = "/app-ads.txt"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
 # ===== Security headers =====
 [[headers]]
   for = "/*"
@@ -22,6 +33,18 @@
     # Prevent cross-origin isolation attacks
     Cross-Origin-Opener-Policy = "same-origin"
     Cross-Origin-Resource-Policy = "same-origin"
+
+[[headers]]
+  for = "/app-ads.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    X-Robots-Tag = "all"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    X-Robots-Tag = "all"
 
 # ===== Cache headers for static assets =====
 [[headers]]
