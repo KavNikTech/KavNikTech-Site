@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Learn how to use — Smart Time & Date Calculator</title>
-  <meta name="description" content="Step-by-step instructions for using Smart Time & Date Calculator." />
+  <title>Learn how to use — Time &amp; Date Calculator</title>
+  <meta name="description" content="Complete step-by-step guide: every tab, screen, button, and flow in Time &amp; Date Calculator for Android." />
   <link rel="canonical" href="https://www.kavniktech.com/apps/smart-time-date-calculator/learn.html" />
   <link rel="icon" href="../../assets/images/kavnik-technologies-logo.png" type="image/png" />
   <link rel="stylesheet" href="../../assets/css/styles.css?v=4">
@@ -31,72 +31,276 @@
   <main>
     <section class="nk-section nk-apps">
       <div class="nk-container nk-card fade-in">
-        <h1>Learn how to use Smart Time & Date Calculator</h1>
-        <p class="muted">Step-by-step instructions. Screenshots coming soon.</p>
+        <h1>Learn how to use Time &amp; Date Calculator</h1>
+        <p class="muted">This page walks through <strong>every main feature</strong> of the Android app: which tab to open, what each button and control does, and how history, records, and Premium options behave. Minor labels may change slightly between app versions—if something looks different on your phone, use the on-screen text as the final word.</p>
 
         <nav class="app-subnav" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
           <a href="index.html" class="btn outline">App overview</a>
           <a href="demo.html" class="btn outline">Video demo</a>
           <a href="privacy.html" class="btn outline">Privacy policy</a>
+          <a href="terms-of-service.html" class="btn outline">Terms of Service</a>
         </nav>
 
-        <h2 id="open-app">Open the app</h2>
+        <h2 id="toc">On this page</h2>
         <ul>
-          <li>Launch Smart Time & Date Calculator.</li>
-          <li>Use the navigation drawer to choose a tool.</li>
-        </ul>
-        <div class="screenshot-placeholder" style="background: var(--bg-secondary); border: 1px dashed var(--border-color); border-radius: 12px; padding: 48px; text-align: center; color: var(--text-muted); margin: 16px 0;">
-          Screenshot coming soon
-        </div>
-
-        <h2 id="time-forecast">Use Time Forecast</h2>
-        <ol>
-          <li>Select <strong>Time Forecast</strong> from the menu.</li>
-          <li>Tap any time input field to open the <strong>custom keypad</strong>.</li>
-          <li>Enter: Current AF / ENG hours, Life Expired (L.E), Installed at AF / ENG hours, Inspection/servicing due at AF / ENG hours.</li>
-          <li>(Optional) Enter Component Name and Tag.</li>
-          <li>Tap <strong>Calculate</strong>.</li>
-          <li>Results appear instantly: current component hours, life remaining, inspection/servicing due at AF / Eng hours.</li>
-          <li>Press the <strong>history icon</strong> in the top bar to view time forecast history.</li>
-        </ol>
-        <div class="screenshot-placeholder" style="background: var(--bg-secondary); border: 1px dashed var(--border-color); border-radius: 12px; padding: 48px; text-align: center; color: var(--text-muted); margin: 16px 0;">
-          Screenshot coming soon
-        </div>
-
-        <h2 id="date-forecast">Use Date Forecast</h2>
-        <ol>
-          <li>Select <strong>Date Forecast</strong>.</li>
-          <li>Choose the base date by radio: <strong>Manufacture date</strong> OR <strong>Installed date</strong>.</li>
-          <li>Enter the base date.</li>
-          <li>Enter <strong>Inspection/servicing due</strong>: numeric value (supports decimals), unit (Years / Months / Weeks / Days).</li>
-          <li>(Optional) Enter Component Name and Tag.</li>
-          <li>Tap <strong>Calculate</strong>.</li>
-          <li>Results: inspection/servicing due on (date), life remaining (years/months/days).</li>
-          <li>Use the history icon for date forecast history.</li>
-        </ol>
-        <div class="screenshot-placeholder" style="background: var(--bg-secondary); border: 1px dashed var(--border-color); border-radius: 12px; padding: 48px; text-align: center; color: var(--text-muted); margin: 16px 0;">
-          Screenshot coming soon
-        </div>
-
-        <h2 id="other-calculators">Use other calculators</h2>
-        <p>Each tool follows a similar flow: enter values → Calculate → view history.</p>
-        <div class="screenshot-placeholder" style="background: var(--bg-secondary); border: 1px dashed var(--border-color); border-radius: 12px; padding: 48px; text-align: center; color: var(--text-muted); margin: 16px 0;">
-          Screenshot coming soon
-        </div>
-
-        <h2 id="input-rules">Input rules & notes</h2>
-        <ul>
-          <li>Required fields show validation via toast messages.</li>
-          <li>Time inputs use a <strong>custom keypad</strong> (no system keyboard).</li>
-          <li>Date inputs format automatically as <strong>DD/MM/YYYY</strong>.</li>
-          <li>Invalid dates are rejected and cleared automatically.</li>
+          <li><a href="#home-nav">Home screen &amp; bottom navigation</a></li>
+          <li><a href="#time-tab">Time Calculators tab (list of tools)</a></li>
+          <li><a href="#smart-time">Smart Time Calculator — keypad &amp; toolbar</a></li>
+          <li><a href="#aviation">Aviation Forecast — every control</a></li>
+          <li><a href="#calc">Calculator (arithmetic) — keypad &amp; toolbar</a></li>
+          <li><a href="#date-tab">Date Tools tab — all four tools</a></li>
+          <li><a href="#utilities">Utilities — Time Zone &amp; Countdown</a></li>
+          <li><a href="#settings">Settings, Premium, feedback &amp; licenses</a></li>
+          <li><a href="#history-export">History, Records &amp; export (Premium)</a></li>
+          <li><a href="#tips">Messages, validation &amp; navigation tips</a></li>
         </ul>
 
-        <h2 id="navigation">Navigation & UI tips</h2>
+        <h2 id="home-nav">Home screen &amp; bottom navigation</h2>
+        <ol>
+          <li>From your device, open the app <strong>Time &amp; Date Calculator</strong>.</li>
+          <li>At the <strong>bottom</strong> of the screen you will see four destinations. Tap one to switch the whole “home” area:
+            <ul>
+              <li><strong>Time Calculators</strong> — opens a scrollable list of three tools in this order: <strong>Smart Time Calculator</strong>, <strong>Aviation Forecast</strong>, and <strong>Calculator</strong>.</li>
+              <li><strong>Date Tools</strong> — opens a list of Date Calculator, Date Difference, Age Calculator, and Workdays Calculator.</li>
+              <li><strong>Utilities</strong> — opens Time Zone Converter and Countdown Timer.</li>
+              <li><strong>Settings</strong> — opens preferences, Premium entry, feedback, licenses, and related options.</li>
+            </ul>
+          </li>
+          <li>Inside a tab, each tool is a <strong>row</strong> with a title, short subtitle, and a chevron (arrow) on the right. <strong>Tap anywhere on that row</strong> to open the tool.</li>
+          <li>To go back from a tool to the list, use the <strong>Back</strong> gesture or the system Back button. You stay inside the same bottom tab until you switch tabs.</li>
+          <li>At the <strong>top</strong>, the title bar shows the name of the current screen (for example “Aviation Forecast” or “Date Calculator”). On many tools you will also see <strong>icons</strong> on the right—history, overflow (⋮), or actions specific to that screen. Those are explained under each feature below.</li>
+        </ol>
+
+        <h2 id="time-tab">Time Calculators tab — what the list shows</h2>
+        <p>After you tap <strong>Time Calculators</strong> on the bottom bar, you should see three entries in this order (same as in the app):</p>
+        <ol>
+          <li><strong>Smart Time Calculator</strong> — subtitle describes add, subtract, multiply &amp; divide time.</li>
+          <li><strong>Aviation Forecast</strong> — subtitle describes forecasting component life &amp; dates.</li>
+          <li><strong>Calculator</strong> — subtitle describes standard arithmetic.</li>
+        </ol>
+        <p>Tap the row you need; the sections below follow the <strong>same order as the list</strong>: Smart Time first, then Aviation Forecast, then Calculator.</p>
+
+        <h2 id="smart-time">Smart Time Calculator</h2>
+        <h3>Open the screen</h3>
+        <ol>
+          <li>Tap <strong>Time Calculators</strong> → <strong>Smart Time Calculator</strong> (first row in the list).</li>
+        </ol>
+        <h3>Top toolbar icons (left to right)</h3>
+        <p>Below the title bar, a row of icon buttons typically includes:</p>
         <ul>
-          <li>Drawer menu gives access to all calculators.</li>
-          <li>Top bar history icon changes based on current screen.</li>
-          <li>Back navigation may show a confirmation dialog (when configured).</li>
+          <li><strong>Delete (clear)</strong> — clears the current calculation / display so you can start fresh.</li>
+          <li><strong>Create Record</strong> — opens a flow to save the current work into a <strong>Record</strong> (grouped entry) when you use that feature.</li>
+          <li><strong>History</strong> — opens <strong>Smart Time Calculator history</strong> (past expressions and results). From history you may open an item or use <strong>Edit</strong> where Premium allows reloading into the calculator.</li>
+          <li><strong>Backspace</strong> — removes the last input step, like a traditional calculator.</li>
+        </ul>
+        <h3>Overflow menu (⋮) — layout (Premium)</h3>
+        <ol>
+          <li>Tap <strong>⋮</strong> (three vertical dots) in the top bar.</li>
+          <li>You will see layout options. <strong>Basic layout</strong> focuses on addition and subtraction of time. <strong>Full layout</strong> adds <strong>multiplication and division</strong> for time.</li>
+          <li>If you are on the free tier, switching to Full layout may show an <strong>Unlock Premium</strong> dialog; Premium users can toggle the switch directly.</li>
+        </ol>
+        <h3>Keypad — digits and operations</h3>
+        <ul>
+          <li>Tap digits <strong>0–9</strong> to build time values as prompted by the display.</li>
+          <li>In <strong>Basic layout</strong>, use the <strong>minus</strong> and <strong>plus</strong> icons for subtraction and addition operations.</li>
+          <li>In <strong>Full layout</strong> (Premium), additional operator buttons appear for <strong>multiplication</strong> and <strong>division</strong>.</li>
+          <li>Tap <strong>=</strong> (equals) to complete the calculation. A valid result is typically saved into <strong>history</strong> automatically when the app is configured to do so.</li>
+        </ul>
+        <h3>Records screen (optional)</h3>
+        <p>If you use <strong>Create Record</strong>, follow the sheet or dialog: enter the details requested, then confirm. You can open <strong>Records</strong> from navigation where the app provides it (often alongside History) to browse saved record groups.</p>
+
+        <h2 id="aviation">Aviation Forecast — Time mode &amp; Date mode</h2>
+        <h3>Open the screen</h3>
+        <ol>
+          <li>Tap <strong>Time Calculators</strong> → <strong>Aviation Forecast</strong> (second row in the list).</li>
+        </ol>
+        <h3>Switch between Time and Date</h3>
+        <ol>
+          <li>Near the top of the screen you will see a <strong>segmented control</strong> with two choices: <strong>Time</strong> and <strong>Date</strong>.</li>
+          <li>Tap <strong>Time</strong> for hour-based (AF/ENG style) forecasting.</li>
+          <li>Tap <strong>Date</strong> for calendar-based due dates and life remaining.</li>
+        </ol>
+        <h3>Time mode — fields, keypad, and Calculate</h3>
+        <ol>
+          <li>Time-sensitive fields open a <strong>custom time keypad</strong> (bottom sheet or overlay) when tapped—use it instead of the phone’s normal keyboard.</li>
+          <li>Fill in the values labeled on your device (for example current AF/ENG hours, life expired, installed-at hours, inspection/servicing due at AF/ENG hours—wording follows your build).</li>
+          <li>If shown, enter optional <strong>Component name</strong> and <strong>Tag</strong> so history entries are easy to recognize later.</li>
+          <li>Tap the main action button <strong>Calculate</strong> (or equivalent primary button) to run the forecast.</li>
+          <li>Read the result block on screen (e.g. current component hours, life remaining, due-at-hour figures—exact labels match the app).</li>
+          <li>To see past runs: tap the <strong>History</strong> icon in the <strong>top app bar</strong> (if present) to open <strong>Time Forecast history</strong>. From there you can open an entry or use edit/export actions your version provides.</li>
+        </ol>
+        <h3>Date mode — base date, interval, and Calculate</h3>
+        <ol>
+          <li>Choose <strong>Manufacture date</strong> or <strong>Installed date</strong> using the on-screen selector (radio or chips—tap the option that matches your scenario).</li>
+          <li>Set the <strong>base date</strong> using the date control (tap the field or calendar icon to open the date picker; confirm with <strong>OK</strong> where applicable).</li>
+          <li>Enter the inspection/servicing interval as a <strong>number</strong> (decimals allowed) and pick the <strong>unit</strong>: Years, Months, Weeks, or Days.</li>
+          <li>Add optional <strong>component name</strong> and <strong>tag</strong> if the form shows them.</li>
+          <li>Tap <strong>Calculate</strong> to see the <strong>due date</strong> and <strong>life remaining</strong> (years, months, days as shown).</li>
+          <li>Use the app bar <strong>History</strong> entry for <strong>Date forecast history</strong> when you need previous calculations. Time and Date histories are kept separately.</li>
+        </ol>
+
+        <h2 id="calc">Calculator (standard arithmetic)</h2>
+        <h3>Open the screen</h3>
+        <ol>
+          <li>Tap <strong>Time Calculators</strong> → <strong>Calculator</strong> (third row in the list).</li>
+        </ol>
+        <h3>Top toolbar</h3>
+        <p>Same pattern as Smart Time:</p>
+        <ul>
+          <li><strong>Delete / Clear</strong> — resets the expression.</li>
+          <li><strong>Create Record</strong> — saves a named or grouped record when offered.</li>
+          <li><strong>History</strong> — opens arithmetic history; you may reload an expression for editing (Premium paths may apply).</li>
+          <li><strong>Backspace</strong> — deletes the last character or token.</li>
+        </ul>
+        <h3>Keypad</h3>
+        <ul>
+          <li>Use rows of number buttons and operators: typically <strong>%</strong>, parentheses <strong>( )</strong>, <strong>÷</strong>, <strong>×</strong>, <strong>−</strong>, <strong>+</strong>, and <strong>=</strong>.</li>
+          <li>The upper area shows the <strong>expression</strong> line and the <strong>result</strong> line—watch both before you tap equals.</li>
+          <li>This calculator is for <strong>plain numbers</strong>, not for time-of-day units (use Smart Time Calculator for that).</li>
+        </ul>
+
+        <h2 id="date-tab">Date Tools tab</h2>
+        <p>Open <strong>Date Tools</strong> on the bottom bar, then choose one of the four rows below.</p>
+
+        <h3>Date Calculator</h3>
+        <ol>
+          <li>Tap <strong>Date Calculator</strong>.</li>
+          <li>Under <strong>Select Date</strong>, tap the <strong>Date</strong> field or the <strong>calendar icon</strong> on the right. A <strong>Date picker</strong> opens; choose a date and confirm with <strong>OK</strong> if shown.</li>
+          <li>Under <strong>Time Units</strong>, tap <strong>Years</strong>, <strong>Months</strong>, <strong>Weeks</strong>, or <strong>Days</strong>. A <strong>numeric keypad bottom sheet</strong> appears: enter digits, use <strong>backspace</strong> or <strong>reset</strong> as offered, then use <strong>Next</strong> to move to the next field until you dismiss the sheet.</li>
+          <li>Tap the <strong>trash / clear</strong> icon in the Time Units card header to <strong>Clear All</strong> unit fields at once.</li>
+          <li>Use the segmented control <strong>Add</strong> / <strong>Subtract</strong> to choose whether to move the start date forward or backward in time.</li>
+          <li>The <strong>Result</strong> card shows the new date in large text. It updates when your inputs are valid.</li>
+          <li>Tap <strong>Save</strong> on the Result card to store a named snapshot; a dialog asks for a <strong>Name</strong>—enter it and confirm <strong>Save</strong> (subject to free/Premium limits).</li>
+          <li>Open <strong>history</strong> from the top bar when the history icon is shown to review past date calculations.</li>
+        </ol>
+
+        <h3>Date Difference</h3>
+        <ol>
+          <li>Tap <strong>Date Difference</strong>.</li>
+          <li><strong>Start Date</strong> — tap the date field or calendar icon to pick the start.</li>
+          <li><strong>End Date</strong> — same for the end (the app may adjust if start and end would be identical).</li>
+          <li>If your build shows <strong>Include time</strong>, use the <strong>Switch</strong> to include time-of-day; then use the <strong>time</strong> fields and clock icons for <strong>Start</strong> and <strong>End</strong>.</li>
+          <li>The difference updates as you change inputs (no separate “Calculate” on many builds).</li>
+          <li>Use <strong>Save</strong> or history actions when visible to keep or recall results.</li>
+        </ol>
+
+        <h3>Age Calculator</h3>
+        <ol>
+          <li>Tap <strong>Age Calculator</strong>.</li>
+          <li>You start on a <strong>Dashboard</strong> that lists saved people or birthdays (if you have created any).</li>
+          <li>Use the in-screen control (often a <strong>+</strong> button or “add” action) to open <strong>Create</strong>: enter a <strong>name</strong> and <strong>birth date</strong> via the date picker, then save.</li>
+          <li>Tap a person to open <strong>Detail</strong> view: see age in years, months, and days relative to a reference date, and any milestone or extra panels your version provides.</li>
+          <li>Use <strong>Back</strong> to return to the dashboard; the top title may change between “Age Calculator” and context-specific titles.</li>
+          <li><strong>History</strong> from the app bar opens <strong>Age Calculator history</strong> when that route is available from the current context.</li>
+        </ol>
+
+        <h3>Workdays Calculator</h3>
+        <ol>
+          <li>Tap <strong>Workdays Calculator</strong>.</li>
+          <li><strong>Start Date</strong> — tap the field or calendar icon; optional <strong>presets</strong> may appear in a dropdown to jump to common dates.</li>
+          <li><strong>End Date</strong> — same.</li>
+          <li>Configure <strong>exclude weekends</strong> and any <strong>excluded weekdays</strong> or <strong>holidays</strong> your screen shows (switches, lists, or add-holiday buttons—follow on-screen labels).</li>
+          <li>Scroll to the <strong>result</strong> section; the count of workdays updates when inputs are valid.</li>
+          <li>Use <strong>Save</strong> or history if shown to store or revisit results.</li>
+        </ol>
+
+        <h2 id="utilities">Utilities tab</h2>
+
+        <h3>Time Zone Converter</h3>
+        <ol>
+          <li>Tap <strong>Utilities</strong> → <strong>Time Zone Converter</strong>.</li>
+          <li><strong>From Time Zone</strong> — tap the trailing <strong>calendar/zone</strong> icon to open the source zone picker; select a region.</li>
+          <li>Tap the centered <strong>Swap</strong> icon button to exchange “from” and “to” zones instantly.</li>
+          <li><strong>To Time Zone</strong> — use the trailing icon to pick the target zone.</li>
+          <li>Under <strong>Date &amp; Time</strong>, toggle <strong>Use Current Time</strong>:
+            <ul>
+              <li><strong>On</strong> — the app uses “now” (date and time fields dim or lock).</li>
+              <li><strong>Off</strong> — tap <strong>Date</strong> and <strong>Time</strong> fields (and their icons) to set a specific moment to convert.</li>
+            </ul>
+          </li>
+          <li>The <strong>Converted Time</strong> card shows the target date, time, and zone name/offset.</li>
+          <li>Tap <strong>Save</strong> on that card to store the conversion; a dialog may ask for a name—confirm <strong>Save</strong> or <strong>Cancel</strong>.</li>
+          <li>Open <strong>history</strong> from the top bar to browse past conversions.</li>
+        </ol>
+
+        <h3>Countdown Timer</h3>
+        <ol>
+          <li>Tap <strong>Utilities</strong> → <strong>Countdown Timer</strong>.</li>
+          <li>At the top, the <strong>quick create</strong> card has: a <strong>name</strong> field, <strong>Date</strong> (calendar icon), <strong>Time</strong> (clock icon), and a full-width <strong>Create</strong> button. Fill them and tap <strong>Create</strong> to add a timer to the list.</li>
+          <li>Below, under <strong>Active</strong>, each timer appears as a <strong>card</strong> with the name, target date/time, and remaining time (or <strong>Paused</strong> / <strong>Completed</strong>).</li>
+          <li>Use the card’s actions to <strong>pause/resume</strong> (toggle) or <strong>delete</strong> (moves to history as deleted, depending on version).</li>
+          <li>When a timer finishes, you may get a <strong>notification</strong> (grant notification permission if asked). A <strong>celebration</strong> overlay can appear—dismiss it to continue.</li>
+          <li>Tap the <strong>History</strong> icon in the app bar (when shown) to open <strong>Countdown / timer history</strong>.</li>
+          <li>To edit an existing timer, tap the card or edit action your UI provides—some builds navigate to an <strong>Update Timer</strong> screen with fields and save actions.</li>
+        </ol>
+
+        <h2 id="settings">Settings, Premium, feedback &amp; licenses</h2>
+        <ol>
+          <li>Tap <strong>Settings</strong> on the bottom bar.</li>
+          <li>Use the <strong>search bar</strong> at the top to filter settings by keyword.</li>
+          <li>If you are not Premium, a <strong>Premium status card</strong> may appear at the top—tap it to go to <strong>Go Premium</strong>.</li>
+          <li>Scroll through <strong>grouped sections</strong> (cards). What each control does and where it applies:</li>
+        </ol>
+
+        <h3 id="settings-theme">Theme (light / dark / system)</h3>
+        <p>Sets how the whole app looks: backgrounds, cards, text, and icons. <strong>Light</strong> is bright for daytime; <strong>Dark</strong> reduces glare at night. <strong>System</strong> follows Android’s display setting, so the app switches when you toggle dark mode in device settings. It does not change math or dates—only appearance.</p>
+
+        <h3 id="settings-haptic-sound">Haptic feedback &amp; sound effects</h3>
+        <p><strong>Haptic feedback</strong> adds short vibrations when you tap buttons, switches, or confirm pickers (where the app supports it). It only works if your phone has a vibration motor and system vibration isn’t disabled. It makes actions feel “confirmed” without changing results.</p>
+        <p><strong>Sound effects</strong> are optional short UI sounds (for example calculator key taps or similar). They are separate from <strong>notification sounds</strong> for countdowns or alarms—those depend on Android notification channels and your device volume. Turning sounds off here does not silence system alerts.</p>
+
+        <h3 id="settings-decimal-places">Decimal places</h3>
+        <p>Controls how many digits appear <strong>after the decimal point</strong> in numeric results where the app formats fractions or precise values—typically in <strong>time math</strong>, <strong>Calculator</strong>, and related summaries. It does not change the underlying calculation; it changes <strong>rounding and display</strong> (and any text you copy or export that uses the same formatter).</p>
+        <p><strong>Example:</strong> With 2 decimals you might see <code>1.25</code> hours; with 4 you might see <code>1.2500</code>. If you need more precision for mental checks, raise it; if you prefer cleaner numbers, lower it.</p>
+
+        <h3 id="settings-date-format">Date format</h3>
+        <p>Controls <strong>how calendar dates are written</strong> across the app: field labels, lists, history, records, and many export/share lines. Formats usually follow a <strong>regional pattern</strong> (order of day, month, year and separators like <code>/</code>, <code>.</code>, or <code>-</code>).</p>
+        <p><strong>Where it shows up:</strong> date pickers, Smart Time and date tools, workdays, age, time-zone converter date rows, countdown target dates, and anywhere the app prints a full date.</p>
+        <p><strong>Example:</strong> The same day might appear as <code>02/15/2026</code> (month first) or <code>15/02/2026</code> (day first), depending on your choice—pick the style that matches how you read dates locally to avoid misreading inputs.</p>
+
+        <h3 id="settings-time-format">Time format</h3>
+        <p>Chooses <strong>12-hour</strong> (with AM/PM) or <strong>24-hour</strong> for times shown in the UI and in many pickers.</p>
+        <p><strong>Where it shows up:</strong> Smart Time inputs and results, Calculator time-related displays, time-zone converter, countdown timer targets and remaining time where formatted as clock time, aviation or other tools that show local times, and history lines that include a time of day.</p>
+        <p><strong>Example:</strong> <code>1:30 PM</code> vs <code>13:30</code> for the same instant. Use 24-hour if you work across time zones or aviation-style schedules; use 12-hour if that’s what you’re used to day to day.</p>
+
+        <h3 id="settings-first-day-week">First day of week</h3>
+        <p>Sets which weekday starts the <strong>week row</strong> in calendar grids and week-oriented pickers—commonly <strong>Sunday</strong> (US-style) or <strong>Monday</strong> (ISO / many business calendars).</p>
+        <p><strong>Where it affects:</strong> any full-month or week-strip calendar when choosing dates; highlighting “this week”; tools that think in weeks (for example skipping weekends in workdays uses Saturday/Sunday, but <em>which column is “first”</em> in the grid follows this setting).</p>
+        <p><strong>Example:</strong> If Monday is first, the left column is Monday; if Sunday is first, Sunday is the first column—same dates, different layout, so your muscle memory for “tap the right column” stays consistent with your paper planner.</p>
+
+        <h3 id="settings-default-screen">Default opening screen</h3>
+        <p>Chooses which <strong>tab or starting route</strong> opens when you launch the app from the launcher (cold start). It saves repeated navigation if you always begin in one area—e.g. <strong>Time Calculators</strong> for Smart Time, <strong>Date Tools</strong> for differences, or <strong>Utilities</strong> for time zones. It does not change behavior inside a tool; only the first screen you land on.</p>
+
+        <h3 id="settings-privacy-ads">Privacy &amp; ads consent</h3>
+        <p>Where shown, these entries link to <strong>privacy choices</strong> or <strong>advertising consent</strong> flows required in your region (for example personalized vs non-personalized ads). Adjusting them can change <strong>how ads are chosen</strong> on the free tier; they do not remove the fact that free mode may show ads unless you use Premium. They do not alter calculation features.</p>
+
+        <h3 id="settings-restore-purchases">Restore purchases (Premium)</h3>
+        <p>Asks Google Play to <strong>re-apply entitlements</strong> you already bought (subscription or lifetime) on this Google account—use after reinstall, on a new phone, or if Premium status didn’t appear. It does not charge again if a valid purchase exists; it only syncs what Play already records.</p>
+
+        <h3 id="settings-send-feedback">Send Feedback</h3>
+        <p>Opens your <strong>email app</strong> with a pre-filled message to KavNik, or an <strong>in-app form</strong>, depending on build and device. Use it for bugs, confusing UI, or feature ideas. It does not change settings; it starts a support conversation.</p>
+
+        <h3 id="settings-licenses">Open Source Licenses</h3>
+        <p>Opens a <strong>licenses screen</strong> listing third-party libraries used in the app. Tap an entry to read the full <strong>copyright and license notice</strong> for that component. This is legal/attribution information only—it does not toggle features.</p>
+
+        <ol start="5">
+          <li>Tap <strong>Go Premium</strong> (from the card or from a section) to see <strong>Monthly</strong> and <strong>Lifetime</strong> plans, prices, and <strong>Unlock Premium</strong>. Use <strong>Restore Purchase</strong> at the bottom if you already bought on this Google account.</li>
+        </ol>
+
+        <h2 id="history-export">History, Records &amp; export (Premium)</h2>
+        <ul>
+          <li><strong>History</strong> — opened from the <strong>clock/history icon</strong> in the top bar on supported screens. Shows a list of past runs; tap an item to view details; use <strong>Edit</strong> or reload actions where the app offers them.</li>
+          <li><strong>Records</strong> — created via <strong>Create Record</strong> on Smart Time and Calculator; browse from the records destination when available.</li>
+          <li><strong>Export</strong> — on Premium, history screens may offer <strong>share</strong> or <strong>export</strong> to <strong>CSV</strong>, <strong>PDF</strong>, or <strong>text</strong>. After sharing, the app may show how many exports remain for the month—read that notice on your device.</li>
+        </ul>
+
+        <h2 id="tips">Messages, validation &amp; navigation tips</h2>
+        <ul>
+          <li><strong>Toast messages</strong> — short pop-ups at the bottom explain validation errors (“enter a valid date”, missing fields, etc.). Read and correct the highlighted field.</li>
+          <li><strong>Upgrade dialogs</strong> — appear when a feature needs Premium; you can dismiss or tap through to <strong>Go Premium</strong>.</li>
+          <li><strong>Interstitial ads</strong> (free tier) may appear when moving between some features; Premium removes them.</li>
+          <li><strong>Bottom tabs</strong> remember separate back stacks: backing out of a tool returns to that tab’s list, not to another tab.</li>
+          <li><strong>Exact alarms &amp; notifications</strong> — for countdowns, grant permissions when Android asks so alerts fire on time.</li>
         </ul>
 
         <p style="margin-top: 32px;"><a href="index.html" class="btn outline">← Back to app overview</a></p>
@@ -106,7 +310,7 @@
 
   <footer class="nk-footer">
     <div class="nk-container nk-footer-grid">
-      <div>© 2025 KavNik Technologies Pvt Ltd</div>
+      <div>© 2026 KavNik Technologies Pvt Ltd</div>
       <nav class="nk-footer-nav">
         <a href="../../index.html">Home</a>
         <a href="../../about.html">About</a>

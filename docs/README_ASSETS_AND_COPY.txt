@@ -29,11 +29,11 @@ File formats: PNG for icons (lossless), JPEG for large feature graphics where fi
 2) Play Store description copies (two versions)
 
 Short description (max ~80 chars):
-Smart time & date calculator and reflex trainer — fast, accurate, intuitive.
+Time & Date Calculator and reflex trainer — fast, accurate, intuitive.
 
 Full description (store listing):
-Smart Time & Date Calculator — every day tool for time & date based calculation
-Perform time arithmetic, convert between formats, and compute date differences with precision. Designed for students, engineers, and professionals who need fast, reliable time math.
+Time & Date Calculator — time & date tools in one app
+Bottom navigation: Time Calculators (Smart Time, Aviation Forecast, arithmetic Calculator), Date Tools (date math, difference, age, workdays), Utilities (time zones, countdowns), and Settings. Premium removes ads, unlocks advanced options, unlimited history, and CSV/PDF/text export.
 
 Cogno Reflex — for training reflex and activities
 Train your brain with dynamic levels of reflex challenges. Track your top scores and improve reaction times with fun, progressively harder exercises.
@@ -46,13 +46,13 @@ Short tagline (one-liner):
 "Smart apps. Simple experiences."
 
 Elevator pitch (for about sections / social bios):
-KavNik Technologies builds elegant, user-friendly apps for Android and Apple platforms. Our apps — Smart Time & Date Calculator and Cogno Reflex — simplify time calculations and sharpen reaction skills with beautiful design and precision.
+KavNik Technologies builds elegant, user-friendly apps for Android and Apple platforms. Our apps — Time & Date Calculator and Cogno Reflex — simplify time calculations and sharpen reaction skills with beautiful design and precision.
 
 YouTube banner text idea:
 KavNik Technologies — Smart tools for time, productivity & reflex training
 
 LinkedIn headline:
-KavNik Technologies Pvt Ltd — Indie app studio | Android & Apple apps | Smart Time & Date Calculator, Cogno Reflex
+KavNik Technologies Pvt Ltd — Indie app studio | Android & Apple apps | Time & Date Calculator, Cogno Reflex
 
 4) Privacy policy & legal guidance (summary of useful sources)
 

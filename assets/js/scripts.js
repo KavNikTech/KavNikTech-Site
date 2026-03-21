@@ -407,41 +407,11 @@
     initDeviceAnimations();
     initAppCardEffects();
     addRippleAnimation();
-    deobfuscateEmails();
     
     // Add fade-in class to hero content
     const heroContent = document.querySelector('.nk-hero-content') || document.querySelector('.nk-hero-copy');
     if (heroContent) {
       heroContent.classList.add('fade-in', 'visible');
-    }
-  }
-
-  // ===== Email obfuscation — prevents bot harvesting =====
-  function deobfuscateEmails() {
-    var els = document.querySelectorAll('[data-em]');
-    for (var i = 0; i < els.length; i++) {
-      var u = els[i].getAttribute('data-em');   // e.g. "support"
-      var d = els[i].getAttribute('data-dom');  // e.g. "kavniktech.com"
-      if (u && d) {
-        var addr = u + '@' + d;
-        els[i].setAttribute('href', 'mailto:' + addr);
-        if (els[i].textContent.indexOf('@') === -1 && els[i].textContent.trim() === '') {
-          els[i].textContent = addr;
-        }
-        // Also replace placeholder text in elements that show the email
-        if (els[i].textContent === '[email]') {
-          els[i].textContent = addr;
-        }
-      }
-    }
-    // Also fill spans that display the address
-    var spans = document.querySelectorAll('[data-email-display]');
-    for (var j = 0; j < spans.length; j++) {
-      var su = spans[j].getAttribute('data-em');
-      var sd = spans[j].getAttribute('data-dom');
-      if (su && sd) {
-        spans[j].textContent = su + '@' + sd;
-      }
     }
   }
 
