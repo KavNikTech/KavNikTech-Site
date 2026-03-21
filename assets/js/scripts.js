@@ -114,8 +114,10 @@
 
   // ===== Scroll Animations (Intersection Observer) =====
   function initScrollAnimations() {
+    // threshold 0 = any pixel visible (fixes long pages: one tall .fade-in wrapper
+    // can never reach 10% of its own height on screen, so 0.1 left content invisible).
     const observerOptions = {
-      threshold: 0.1,
+      threshold: 0,
       rootMargin: '0px 0px -50px 0px'
     };
     
