@@ -14,25 +14,81 @@
     try { localStorage.setItem(key, value); } catch (e) { /* private mode or quota */ }
   }
 
-  // ===== Theme Toggle =====
+  // ===== Theme: system (browser/OS) default, optional user override =====
+  var themeMediaQuery = null;
+
+  function getThemePreference() {
+    var pref = storageGet('themePreference');
+    if (pref === 'light' || pref === 'dark' || pref === 'system') {
+      return pref;
+    }
+    var legacy = storageGet('theme');
+    if (legacy === 'light' || legacy === 'dark') {
+      storageSet('themePreference', legacy);
+      return legacy;
+    }
+    return 'system';
+  }
+
+  function effectiveThemeFromPreference(pref) {
+    if (pref === 'light' || pref === 'dark') {
+      return pref;
+    }
+    try {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch (e) {
+      return 'light';
+    }
+  }
+
+  function applyThemeFromStorageEarly() {
+    try {
+      var pref = getThemePreference();
+      var eff = effectiveThemeFromPreference(pref);
+      document.documentElement.setAttribute('data-theme', eff);
+    } catch (e) { /* ignore */ }
+  }
+
+  applyThemeFromStorageEarly();
+
+  function applyResolvedTheme() {
+    applyThemeFromStorageEarly();
+    var pref = getThemePreference();
+    var effective = effectiveThemeFromPreference(pref);
+    updateThemeToggleUI(pref, effective);
+  }
+
   function initThemeToggle() {
-    const themeToggle = document.querySelector('.nk-theme-toggle');
-    const currentTheme = storageGet('theme') || 'light';
-    
-    // Set initial theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
-    
+    applyResolvedTheme();
+
+    try {
+      themeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      if (themeMediaQuery && themeMediaQuery.addEventListener) {
+        themeMediaQuery.addEventListener('change', function() {
+          if (getThemePreference() === 'system') {
+            applyResolvedTheme();
+          }
+        });
+      } else if (themeMediaQuery && themeMediaQuery.addListener) {
+        themeMediaQuery.addListener(function() {
+          if (getThemePreference() === 'system') {
+            applyResolvedTheme();
+          }
+        });
+      }
+    } catch (e) { /* ignore */ }
+
+    var themeToggle = document.querySelector('.nk-theme-toggle');
     if (themeToggle) {
       themeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        storageSet('theme', newTheme);
-        updateThemeIcon(newTheme);
-        
-        // Add animation effect
+        var pref = getThemePreference();
+        var next = pref === 'system' ? 'light' : (pref === 'light' ? 'dark' : 'system');
+        storageSet('themePreference', next);
+        try {
+          storageRemove('theme');
+        } catch (err) { /* ignore */ }
+        applyResolvedTheme();
+
         themeToggle.style.transform = 'rotate(360deg)';
         setTimeout(function() {
           themeToggle.style.transform = '';
@@ -40,11 +96,30 @@
       });
     }
   }
-  
-  function updateThemeIcon(theme) {
-    const themeToggle = document.querySelector('.nk-theme-toggle');
-    if (themeToggle) {
-      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+  function storageRemove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) { /* ignore */ }
+  }
+
+  function updateThemeToggleUI(preference, effective) {
+    var themeToggle = document.querySelector('.nk-theme-toggle');
+    if (!themeToggle) {
+      return;
+    }
+    if (preference === 'system') {
+      themeToggle.textContent = '🌓';
+      themeToggle.setAttribute('title', 'Theme: Automatic (matches device). Click for light, then dark, then automatic.');
+      themeToggle.setAttribute('aria-label', 'Theme: automatic — currently ' + effective + ' (follows device). Click to cycle.');
+    } else if (preference === 'light') {
+      themeToggle.textContent = '🌙';
+      themeToggle.setAttribute('title', 'Theme: Light. Click for dark, then automatic.');
+      themeToggle.setAttribute('aria-label', 'Theme: light. Click to cycle to dark, then automatic.');
+    } else {
+      themeToggle.textContent = '☀️';
+      themeToggle.setAttribute('title', 'Theme: Dark. Click for automatic (device), then light.');
+      themeToggle.setAttribute('aria-label', 'Theme: dark. Click to cycle to automatic, then light.');
     }
   }
 

@@ -47,9 +47,11 @@
         <h2 id="toc">On this page</h2>
         <ul>
           <li><a href="#tabs">Bottom tabs &amp; lists</a></li>
-          <li><a href="#time-tools">Time Tools — Smart Time, Aviation forecast, Fuel</a></li>
+          <li><a href="#time-tools">Time Tools — Smart Time &amp; Aviation forecast</a></li>
+          <li><a href="#fuel-calculator">Fuel Calculator (step-by-step)</a></li>
           <li><a href="#date-tools">Date Tools — all four calculators</a></li>
-          <li><a href="#utilities">Utilities — Calculator, zones, countdown, expense splitter</a></li>
+          <li><a href="#utilities">Utilities — Calculator, zones, countdown</a></li>
+          <li><a href="#expense-splitter">Expense Splitter (step-by-step)</a></li>
           <li><a href="#settings">Settings — Premium, appearance, preferences, about</a></li>
           <li><a href="#history">History, records, limits &amp; export</a></li>
           <li><a href="#tips">Tips &amp; permissions</a></li>
@@ -89,10 +91,33 @@
           <li>Open <strong>history</strong> from the navigation area when available; time and date runs are kept distinct where the app provides separate lists.</li>
         </ol>
 
-        <h3>Fuel Calculator</h3>
+        <h2 id="fuel-calculator">Fuel Calculator</h2>
+        <p class="muted">Planning aid only—always comply with your operator, regulator, and approved flight-planning process.</p>
         <ol>
-          <li>Tab <strong>Time Tools</strong> → <strong>Fuel Calculator</strong> (trip fuel, reserves, average burn).</li>
-          <li>Fill the fields as labeled; run the calculation and review results. Use history from the tool chrome when shown.</li>
+          <li>Tab <strong>Time Tools</strong> → <strong>Fuel Calculator</strong>.</li>
+          <li>At the top, choose <strong>Pilot</strong> (trip planning) or <strong>Ground</strong> (average burn from a known total).</li>
+          <li><strong>Pilot mode</strong>
+            <ol>
+              <li>Pick a <strong>flow unit</strong> (for example litres per hour or US gallons per hour) so cruise flow and quantities stay consistent.</li>
+              <li>Enter <strong>cruise fuel flow</strong> and <strong>trip time</strong> (often via the custom time keypad).</li>
+              <li>Set <strong>contingency</strong> using a preset percentage or a custom value, depending on what the screen offers.</li>
+              <li>Choose a <strong>final reserve</strong> rule (such as day VFR, night VFR, IFR, or a custom minute value).</li>
+              <li>For <strong>alternate</strong>, switch between entering extra fuel as a volume or as a <strong>time</strong> at cruise flow—whichever matches how you brief.</li>
+              <li>Add <strong>taxi</strong> and <strong>extra</strong> fuel if your SOP includes them.</li>
+              <li>Optionally fill <strong>flight number</strong> and <strong>route</strong> for your own notes.</li>
+              <li>Tap <strong>Calculate</strong>. Read the breakdown (trip, contingency, reserve, alternate, total) and compare against tanks or policy. Read any on-screen disclaimer.</li>
+              <li>Open <strong>History</strong> from the toolbar when you need to reuse or audit a past profile.</li>
+            </ol>
+          </li>
+          <li><strong>Ground mode</strong>
+            <ol>
+              <li>Enter <strong>total fuel</strong> on board (or loaded) in the selected quantity unit.</li>
+              <li>Enter <strong>flight or block time</strong> for the segment you are analyzing.</li>
+              <li>Add an optional <strong>aircraft</strong> label if you want it in history.</li>
+              <li>Tap <strong>Calculate</strong> to read <strong>average burn rate</strong> in your flow unit.</li>
+            </ol>
+          </li>
+          <li>On iPhone in pilot mode, a <strong>bottom sheet keypad</strong> may appear for time or numeric fields—dismiss it by swiping down or using the gap above the sheet, as the UI indicates.</li>
         </ol>
 
         <h2 id="date-tools">Date Tools</h2>
@@ -116,8 +141,30 @@
         <p>Create timers from the list screen. Grant <strong>notifications</strong> when iOS asks if you want alerts at completion. Free tier: limited number of <strong>simultaneous active</strong> incomplete timers. Completed timers may appear in a history list with free-tier retention limits.</p>
         <p>If notifications were denied, Settings can surface a shortcut to open <strong>system notification settings</strong> for the app when that row is shown.</p>
 
-        <h3>Expense Splitter</h3>
-        <p>Manage trips and shared expenses; opening a trip pushes a detail flow. The tab bar keeps trip detail under Utilities with Expense Splitter—stay in that tab when working there.</p>
+        <h2 id="expense-splitter">Expense Splitter</h2>
+        <ol>
+          <li>Tab <strong>Utilities</strong> → <strong>Expense Splitter</strong>. You should see a <strong>list of trips</strong> (or an empty state with a way to add your first trip).</li>
+          <li>Start a trip: use <strong>Add trip</strong> (or equivalent), give it a name, and optionally set start/end dates if the form provides them—dates help you tell similar trips apart later.</li>
+          <li>Open the trip row to enter the <strong>trip workspace</strong>. The navigation stack stays under Utilities so you can return to the trip list with Back.</li>
+          <li>Add <strong>people</strong> who are sharing costs: use first name and optional last name; the app builds a display name for ledgers and settlements.</li>
+          <li>Add each <strong>expense</strong>:
+            <ul>
+              <li>Enter the <strong>amount</strong>.</li>
+              <li>Choose <strong>Paid by</strong> from the people you added (add people first if the menu says to).</li>
+              <li>Add an optional <strong>note</strong> or pick a <strong>category</strong> when offered—handy for meals, fuel, lodging, or transport.</li>
+            </ul>
+          </li>
+          <li>Watch the running <strong>total</strong> and item count update as you add lines—sanity-check against receipts.</li>
+          <li>When the ledger is ready, tap <strong>Calculate</strong> (or the result action shown on screen) to see:
+            <ul>
+              <li>Each person’s <strong>fair share</strong> of the trip total.</li>
+              <li><strong>Balances</strong> (who over-paid vs under-paid relative to that share).</li>
+              <li>A short <strong>settlement</strong> list: suggested “pay from A to B” transfers that clear balances with fewer transactions.</li>
+            </ul>
+          </li>
+          <li>Edit people or expenses if someone joins late or a bill is corrected, then run <strong>Calculate</strong> again.</li>
+          <li>Use <strong>History</strong> or past snapshots when the app offers them to review a closed trip later.</li>
+        </ol>
 
         <h2 id="settings">Settings</h2>
         <ol>
@@ -163,6 +210,6 @@
       </nav>
     </div>
   </footer>
-  <script src="../../assets/js/scripts.js?v=5"></script>
+  <script src="../../assets/js/scripts.js?v=6"></script>
 </body>
 </html>

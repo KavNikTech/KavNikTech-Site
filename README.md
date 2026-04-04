@@ -41,7 +41,7 @@ KavNikTech-Site/
 ├── assets/
 │   ├── css/styles.css
 │   ├── js/scripts.js
-│   └── images/
+│   └── images/                # logos, app icons (incl. time-date-calc-aviation-ios-icon.png)
 │
 └── docs/
     ├── HOSTING_GUIDE.md
@@ -77,6 +77,8 @@ python3 -m http.server 8080
 ```
 
 Then open `http://127.0.0.1:8080/`.
+
+**Theme:** By default the site follows your system/browser light or dark preference. Use the moon / sun / half-moon control in the header to cycle **Automatic (device)** → **Light** → **Dark**; your choice is saved in the browser.
 
 ---
 

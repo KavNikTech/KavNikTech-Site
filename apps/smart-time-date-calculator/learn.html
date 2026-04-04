@@ -48,9 +48,9 @@
           <li><a href="#time-tab">Time Calculators tab (list of tools)</a></li>
           <li><a href="#smart-time">Smart Time Calculator — keypad &amp; toolbar</a></li>
           <li><a href="#aviation">Aviation Forecast — every control</a></li>
-          <li><a href="#calc">Calculator (arithmetic) — keypad &amp; toolbar</a></li>
+          <li><a href="#fuel-calculator">Fuel Calculator — pilot &amp; ground modes</a></li>
           <li><a href="#date-tab">Date Tools tab — all four tools</a></li>
-          <li><a href="#utilities">Utilities — Time Zone &amp; Countdown</a></li>
+          <li><a href="#utilities">Utilities — time zone, countdown, calculator, expense splitter</a></li>
           <li><a href="#settings">Settings, Premium, feedback &amp; licenses</a></li>
           <li><a href="#history-export">History, Records &amp; export (Premium)</a></li>
           <li><a href="#tips">Messages, validation &amp; navigation tips</a></li>
@@ -61,9 +61,9 @@
           <li>From your device, open the app <strong>Time &amp; Date Calculator</strong>.</li>
           <li>At the <strong>bottom</strong> of the screen you will see four destinations. Tap one to switch the whole “home” area:
             <ul>
-              <li><strong>Time Calculators</strong> — opens a scrollable list of three tools in this order: <strong>Smart Time Calculator</strong>, <strong>Aviation Forecast</strong>, and <strong>Calculator</strong>.</li>
+              <li><strong>Time Calculators</strong> — opens a scrollable list of three tools in this order: <strong>Smart Time Calculator</strong>, <strong>Aviation Forecast</strong>, and <strong>Fuel Calculator</strong>.</li>
               <li><strong>Date Tools</strong> — opens a list of Date Calculator, Date Difference, Age Calculator, and Workdays Calculator.</li>
-              <li><strong>Utilities</strong> — opens Time Zone Converter and Countdown Timer.</li>
+              <li><strong>Utilities</strong> — opens standard <strong>Calculator</strong> (arithmetic), Time Zone Converter, Countdown Timer, and <strong>Expense Splitter</strong>.</li>
               <li><strong>Settings</strong> — opens preferences, Premium entry, feedback, licenses, and related options.</li>
             </ul>
           </li>
@@ -77,9 +77,9 @@
         <ol>
           <li><strong>Smart Time Calculator</strong> — subtitle describes add, subtract, multiply &amp; divide time.</li>
           <li><strong>Aviation Forecast</strong> — subtitle describes forecasting component life &amp; dates.</li>
-          <li><strong>Calculator</strong> — subtitle describes standard arithmetic.</li>
+          <li><strong>Fuel Calculator</strong> — subtitle describes trip fuel, reserves, and average burn.</li>
         </ol>
-        <p>Tap the row you need; the sections below follow the <strong>same order as the list</strong>: Smart Time first, then Aviation Forecast, then Calculator.</p>
+        <p>Tap the row you need; the sections below follow that list: Smart Time, then Aviation Forecast, then Fuel Calculator. The arithmetic <strong>Calculator</strong> is under <strong>Utilities</strong> (see below).</p>
 
         <h2 id="smart-time">Smart Time Calculator</h2>
         <h3>Open the screen</h3>
@@ -140,25 +140,35 @@
           <li>Use the app bar <strong>History</strong> entry for <strong>Date forecast history</strong> when you need previous calculations. Time and Date histories are kept separately.</li>
         </ol>
 
-        <h2 id="calc">Calculator (standard arithmetic)</h2>
+        <h2 id="fuel-calculator">Fuel Calculator</h2>
+        <p class="muted">Planning aid only—follow your operator, regulator, and approved flight-planning requirements.</p>
         <h3>Open the screen</h3>
         <ol>
-          <li>Tap <strong>Time Calculators</strong> → <strong>Calculator</strong> (third row in the list).</li>
+          <li>Tap <strong>Time Calculators</strong> → <strong>Fuel Calculator</strong> (third row in the list).</li>
         </ol>
-        <h3>Top toolbar</h3>
-        <p>Same pattern as Smart Time:</p>
-        <ul>
-          <li><strong>Delete / Clear</strong> — resets the expression.</li>
-          <li><strong>Create Record</strong> — saves a named or grouped record when offered.</li>
-          <li><strong>History</strong> — opens arithmetic history; you may reload an expression for editing (Premium paths may apply).</li>
-          <li><strong>Backspace</strong> — deletes the last character or token.</li>
-        </ul>
-        <h3>Keypad</h3>
-        <ul>
-          <li>Use rows of number buttons and operators: typically <strong>%</strong>, parentheses <strong>( )</strong>, <strong>÷</strong>, <strong>×</strong>, <strong>−</strong>, <strong>+</strong>, and <strong>=</strong>.</li>
-          <li>The upper area shows the <strong>expression</strong> line and the <strong>result</strong> line—watch both before you tap equals.</li>
-          <li>This calculator is for <strong>plain numbers</strong>, not for time-of-day units (use Smart Time Calculator for that).</li>
-        </ul>
+        <h3>Choose Pilot or Engineer / ground mode</h3>
+        <ol>
+          <li>Use the segmented control (or tabs) at the top to switch <strong>Pilot</strong> (trip planning from flow and time) and <strong>Engineer</strong> (average burn from total fuel and time)—labels match your build.</li>
+        </ol>
+        <h3>Pilot mode — typical flow</h3>
+        <ol>
+          <li>Select a <strong>flow unit</strong> (litres per hour, US gallons per hour, etc.) so cruise flow and fuel quantities stay consistent.</li>
+          <li>Enter <strong>cruise fuel flow</strong> and <strong>trip time</strong> using the custom time or numeric keypads when a field opens a bottom sheet.</li>
+          <li>Set <strong>contingency</strong> from presets (such as 0%, 3%, 5%, 10%, 15%) or switch to a custom percentage.</li>
+          <li>Pick a <strong>final reserve</strong> rule: day VFR, night VFR, IFR, or a custom minute value.</li>
+          <li>For <strong>alternate</strong>, choose whether you enter extra fuel as a <strong>volume</strong> or as <strong>time</strong> at cruise flow.</li>
+          <li>Add <strong>taxi</strong> and <strong>extra</strong> fuel if your checklist includes them.</li>
+          <li>Optionally type <strong>flight number</strong> and <strong>route</strong> for your records.</li>
+          <li>Tap <strong>Calculate</strong>. Read trip fuel, contingency, reserve, alternate, and total; review any on-screen disclaimer.</li>
+          <li>Open <strong>History</strong> from the app bar when you need prior runs.</li>
+        </ol>
+        <h3>Engineer / ground mode</h3>
+        <ol>
+          <li>Enter <strong>total fuel</strong> in the selected quantity unit.</li>
+          <li>Enter <strong>flight or block time</strong>.</li>
+          <li>Add optional <strong>aircraft</strong> text if the field is shown.</li>
+          <li>Tap <strong>Calculate</strong> to read <strong>average burn rate</strong> in your flow unit.</li>
+        </ol>
 
         <h2 id="date-tab">Date Tools tab</h2>
         <p>Open <strong>Date Tools</strong> on the bottom bar, then choose one of the four rows below.</p>
@@ -206,6 +216,15 @@
         </ol>
 
         <h2 id="utilities">Utilities tab</h2>
+        <p>Open <strong>Utilities</strong> on the bottom bar. You should see four tools in this order: <strong>Calculator</strong> (arithmetic), <strong>Time Zone Converter</strong>, <strong>Countdown Timer</strong>, and <strong>Expense Splitter</strong>.</p>
+
+        <h3>Calculator (standard arithmetic)</h3>
+        <ol>
+          <li>Tap <strong>Utilities</strong> → <strong>Calculator</strong> (first row in the list).</li>
+          <li>Toolbar matches Smart Time patterns: <strong>clear</strong>, <strong>Create Record</strong>, <strong>History</strong>, <strong>Backspace</strong>.</li>
+          <li>Use <strong>%</strong>, parentheses, and standard operators on the keypad; the expression and result lines update as you build the calculation.</li>
+          <li>This screen is for <strong>plain numbers</strong> only—use Smart Time Calculator for hour/minute math.</li>
+        </ol>
 
         <h3>Time Zone Converter</h3>
         <ol>
@@ -233,6 +252,18 @@
           <li>When a timer finishes, you may get a <strong>notification</strong> (grant notification permission if asked). A <strong>celebration</strong> overlay can appear—dismiss it to continue.</li>
           <li>Tap the <strong>History</strong> icon in the app bar (when shown) to open <strong>Countdown / timer history</strong>.</li>
           <li>To edit an existing timer, tap the card or edit action your UI provides—some builds navigate to an <strong>Update Timer</strong> screen with fields and save actions.</li>
+        </ol>
+
+        <h3>Expense Splitter</h3>
+        <ol>
+          <li>Tap <strong>Utilities</strong> → <strong>Expense Splitter</strong> to open your <strong>trips</strong> list.</li>
+          <li>Add a <strong>new trip</strong>: name it and set optional start/end dates when the form offers them.</li>
+          <li>Open a trip to reach the workspace. Add <strong>people</strong> who share costs (first name plus optional last name become the display name).</li>
+          <li>For each receipt or bill, tap to add an <strong>expense</strong>: enter <strong>amount</strong>, choose <strong>Paid by</strong> from the people list, and add a <strong>note</strong> or <strong>category</strong> if shown.</li>
+          <li>Check the running <strong>total</strong> and line count against your actual spending.</li>
+          <li>Tap <strong>Calculate</strong> to see each person’s <strong>equal share</strong>, per-person <strong>balances</strong>, and a <strong>simplified settlement</strong> list (minimal “A pays B” transfers).</li>
+          <li>Fix mistakes by editing people or expenses, then run <strong>Calculate</strong> again.</li>
+          <li>Use <strong>History</strong> when the app stores past settlements so you can reopen a closed trip’s summary.</li>
         </ol>
 
         <h2 id="settings">Settings, Premium, feedback &amp; licenses</h2>
@@ -321,6 +352,6 @@
       </nav>
     </div>
   </footer>
-  <script src="../../assets/js/scripts.js?v=5"></script>
+  <script src="../../assets/js/scripts.js?v=6"></script>
 </body>
 </html>
