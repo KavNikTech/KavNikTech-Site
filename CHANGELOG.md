@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- **Public copy cleanup** — Removed app package/bundle identifiers, StoreKit product IDs, internal build/manifest references, and publisher advertising identifiers from site HTML and docs. Google Play links use store search instead of package-specific URLs. Advertising is described generically (“third-party networks”) where detailed vendor naming is not required.
+- **Removed `app-ads.txt`** and related Netlify rules (restore from backup and re-publish if you need authorized-sellers verification on this domain again).
+- **Company `privacy.html`** — Generalized service-provider and Android subsections to avoid naming specific SDK stacks.
+
 ### Added
 
 - `CHANGELOG.md` (this file), root `SECURITY.md`, and README maintenance / structure updates.

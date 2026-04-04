@@ -53,11 +53,9 @@
           <a href="terms-of-service.html" class="btn outline">Terms of Service</a>
         </nav>
 
-        <!-- App Store: replace href with https://apps.apple.com/app/idYOUR_ID when assigned. -->
-
         <h2>Overview</h2>
         <p><strong>Time &amp; Date Calc - Aviation</strong> is the iOS edition of our time-and-date suite. Tools are grouped under four bottom tabs—<strong>Time Tools</strong>, <strong>Date Tools</strong>, <strong>Utilities</strong>, and <strong>Settings</strong>—matching the structure in the shipped app. Open a tab, choose a tool from the list, then work inside that screen’s navigation stack.</p>
-        <p>Calculations, history, records, countdowns, and preferences are stored <strong>on your device</strong> using Apple’s <strong>SwiftData</strong> and local settings; KavNik Technologies does not operate a backend that receives your calculator inputs or results. The free tier may show <strong>Google AdMob</strong> ads; <strong>Premium</strong> removes ads and lifts limits described below and in-app.</p>
+        <p>Calculations, history, records, countdowns, and preferences are stored <strong>on your device</strong>; KavNik Technologies does not operate a backend that receives your calculator inputs or results. The free tier may show third-party ads; <strong>Premium</strong> removes ads and lifts limits described below and in-app.</p>
         <p>For the <strong>Android</strong> edition (Google Play), see <a href="../smart-time-date-calculator/index.html">Time &amp; Date Calculator</a>.</p>
 
         <h2>Navigation (as in the app)</h2>
@@ -81,7 +79,7 @@
         <ul>
           <li>Segmented control at the top switches <strong>Time</strong> mode (hour-style fields such as AF/ENG hours, life expired, installed-at, due-at targets) and <strong>Date</strong> mode (manufacture vs installed anchors, interval in years/months/weeks/days, due-on date and life remaining).</li>
           <li>Optional <strong>component name</strong> and <strong>tag</strong> for traceability; separate histories for time vs date forecasts where the app provides them.</li>
-          <li>Premium may unlock professional <strong>export</strong> where enabled in your build.</li>
+          <li>Premium may unlock professional <strong>export</strong> where the app provides it.</li>
         </ul>
 
         <h3>Fuel Calculator</h3>
@@ -96,7 +94,7 @@
         </ul>
 
         <h3>Date Tools</h3>
-        <p>Date Calculator, Date Difference, Age Calculator, and Workdays Calculator each maintain their own history; Age Calculator uses a tighter free-tier history cap in code (<strong>5</strong> entries vs <strong>10</strong> for most other tools) unless Premium is active.</p>
+        <p>Date Calculator, Date Difference, Age Calculator, and Workdays Calculator each maintain their own history; Age Calculator typically uses a tighter free-tier history cap (<strong>5</strong> entries vs <strong>10</strong> for most other tools) unless Premium is active—confirm limits in the app.</p>
 
         <h3>Time Zone Converter</h3>
         <ul>
@@ -105,7 +103,7 @@
 
         <h3>Countdown Timer</h3>
         <ul>
-          <li>Multiple countdowns; uses <strong>notifications</strong> when you grant them. Free tier limits how many <strong>active</strong> incomplete timers you can have at once (<strong>5</strong> in the current app logic).</li>
+          <li>Multiple countdowns; uses <strong>notifications</strong> when you grant them. The free tier limits how many <strong>active</strong> incomplete timers you can have at once (see the app for the current limit).</li>
           <li>Completed timer history is also capped for free users; Premium removes those caps.</li>
         </ul>
 
@@ -115,16 +113,10 @@
         </ul>
 
         <h2>History, records, and free-tier limits</h2>
-        <p>Unless <strong>Premium</strong> is active, the app enforces caps aligned with the current Swift code: <strong>10</strong> history entries per calculator type (except <strong>5</strong> for Age Calculator), <strong>10</strong> records per supported tool, up to <strong>5</strong> active countdowns, and fair-use limits on <strong>CSV/PDF</strong> exports per month for free users. Premium unlocks unlimited retention (where applicable), export, full Smart Time layout, and removes ads—see Settings → Premium and the paywall for live pricing.</p>
+        <p>Unless <strong>Premium</strong> is active, the app enforces limits on history, records, active countdowns, and exports for free users (exact numbers are shown in the app and may change between versions). Premium unlocks broader retention where applicable, export options, full Smart Time layout, and removes ads—see Settings → Premium and the paywall for live pricing.</p>
 
         <h2>In-app purchases (StoreKit)</h2>
-        <p>Purchases are processed by <strong>Apple</strong> via StoreKit. Product identifiers configured in the project include a default <strong>lifetime</strong> SKU <code>com.KavNikTech.TimeCalc.pro_unlock</code> (unless overridden by <code>PRO_UNLOCK_PRODUCT_ID</code> in Info.plist) and subscription IDs <code>com.KavNikTech.TimeCalc.subscription.monthly</code> and <code>com.KavNikTech.TimeCalc.subscription.yearly</code> when present. The exact offerings shown in-app depend on App Store Connect and your region.</p>
-
-        <h2>Identifiers</h2>
-        <ul>
-          <li><strong>Apple bundle ID:</strong> <code>com.kavniktech.aviationtimecalc</code></li>
-          <li><strong>Related Android package (different listing):</strong> <code>com.kavniktech.timedateplus</code></li>
-        </ul>
+        <p>Purchases are processed by <strong>Apple</strong> via StoreKit. Available plans (for example subscription or one-time unlock) and prices are shown in the app and on the App Store listing for your region.</p>
 
         <p><strong>Also available:</strong> <a href="../smart-time-date-calculator/index.html">Time &amp; Date Calculator for Android (Google Play)</a></p>
 

@@ -117,7 +117,7 @@
         <p>If notifications were denied, Settings can surface a shortcut to open <strong>system notification settings</strong> for the app when that row is shown.</p>
 
         <h3>Expense Splitter</h3>
-        <p>Manage trips and shared expenses; opening a trip pushes a detail flow. The tab bar treats trip detail as part of Expense Splitter for ad and navigation bookkeeping—stay in Utilities when working there.</p>
+        <p>Manage trips and shared expenses; opening a trip pushes a detail flow. The tab bar keeps trip detail under Utilities with Expense Splitter—stay in that tab when working there.</p>
 
         <h2 id="settings">Settings</h2>
         <ol>
@@ -126,17 +126,16 @@
           <li><strong>Premium</strong> — when not subscribed, you’ll see benefits (no ads, advanced features &amp; export, unlimited history), <strong>Go Premium</strong>, and <strong>Restore Purchases</strong>.</li>
           <li><strong>Appearance</strong> — theme mode and accent color.</li>
           <li><strong>Calculator preferences</strong> — default opening calculator, haptics, sound effects, decimal places, date format, time format, first day of week.</li>
-          <li><strong>Privacy &amp; Security</strong> — optional link to enable notifications if denied; links to this site’s <a href="privacy.html">Privacy policy</a> and <a href="terms-of-service.html">Terms of Service</a> (you can point the app’s Info.plist links here in a future app update).</li>
-          <li><strong>About</strong> — version, rate (when App Store ID is configured), share link, <strong>Send Feedback</strong> (email).</li>
+          <li><strong>Privacy &amp; Security</strong> — optional link to enable notifications if denied; links to this site’s <a href="privacy.html">Privacy policy</a> and <a href="terms-of-service.html">Terms of Service</a>.</li>
+          <li><strong>About</strong> — version, rate and share (when available on your build), <strong>Send Feedback</strong> (email).</li>
         </ol>
-        <p class="muted">A developer-only “Testing: treat as Premium” toggle may appear in debug or internal builds; release builds from the App Store should not rely on it for real purchases.</p>
 
         <h2 id="history">History, records, limits &amp; export</h2>
         <ul>
           <li>Each calculator type keeps its own history so entries do not mix between tools.</li>
           <li><strong>Duplicate suppression</strong> avoids stacking identical runs where implemented.</li>
           <li>Free tier: <strong>10</strong> history entries per type in most tools, <strong>5</strong> for Age Calculator; <strong>10</strong> records where Records exist; countdown and export limits as in the live app.</li>
-          <li>Premium: unlimited history/records where the code removes caps; export to CSV/PDF/text where the tool exposes share actions, subject to any fair-use messaging after export.</li>
+          <li>Premium: broader history and records where the app allows; export to CSV/PDF/text where the tool exposes share actions, subject to any fair-use messaging after export.</li>
         </ul>
 
         <h2 id="tips">Tips &amp; permissions</h2>
@@ -144,7 +143,7 @@
           <li><strong>Ads</strong> — banner placement respects safe areas; interstitials may appear between sessions on free tier. Premium removes ads.</li>
           <li><strong>App Tracking Transparency</strong> — the free build may request permission to track for ad relevance; you can decline in the system dialog.</li>
           <li><strong>Internet</strong> — needed for ads and StoreKit product loading; not used to upload your calculation payloads to KavNik.</li>
-          <li><strong>Data safety</strong> — uninstalling the app removes local SwiftData content unless iOS backup/restore applies.</li>
+          <li><strong>Data safety</strong> — uninstalling the app removes local app data unless iOS backup/restore applies.</li>
         </ul>
 
         <p style="margin-top: 24px;"><a href="index.html" class="btn outline">← Back to app overview</a></p>

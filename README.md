@@ -21,7 +21,6 @@ KavNikTech-Site/
 ├── .well-known/
 │   └── security.txt          # RFC 9116 — security contact on the live site
 ├── netlify.toml
-├── app-ads.txt
 │
 ├── apps/
 │   ├── index.html             # Apps listing (use this URL in links — see below)

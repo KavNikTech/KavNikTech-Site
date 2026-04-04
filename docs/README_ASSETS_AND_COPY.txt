@@ -67,5 +67,5 @@ Useful references found while researching:
 5) Next steps you can ask me to do (I can do now):
 - Replace the mockup placeholders with real screenshots (if you upload them).
 - Generate pixel-perfect Play Store feature graphic and icons (SVG/PNG) based on your logo.
-- Customize the privacy policy further to reflect specific SDKs (Firebase, AdMob) or analytics you use.
+- Customize the privacy policy further to reflect specific SDKs or analytics you use.
 - Provide an HTML-hostable contact form backed by a static-friendly service (Formspree / Netlify Forms) instead of mailto.
