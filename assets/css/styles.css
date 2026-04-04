@@ -654,6 +654,33 @@ body::before {
   font-weight: 400;
 }
 
+.app-platform-label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-solid);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-color);
+}
+
+.nk-app-suite-heading {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.app-card-span-2 {
+  grid-column: 1 / -1;
+}
+
 .app-content p.muted {
   margin: 0 0 12px;
   color: var(--text-secondary);

@@ -1,2 +1,4 @@
 # Cursor project rules — local only, do not sync
 .cursorrules
+
+.DS_Store

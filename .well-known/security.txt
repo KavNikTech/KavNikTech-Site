@@ -1,0 +1,8 @@
+# KavNik Technologies — security.txt (RFC 9116)
+# https://www.kavniktech.com/.well-known/security.txt
+
+Contact: mailto:support@kavniktech.com
+Preferred-Languages: en
+
+# Review this file at least annually and update Expires if needed.
+Expires: 2027-12-31T23:59:59.000Z
