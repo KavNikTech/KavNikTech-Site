@@ -54,6 +54,27 @@ Netlify is free for static sites and works well with a custom domain.
 
 In Netlify, go to **Domain settings** → **HTTPS** and enable **Let’s Encrypt**. Netlify will issue a free SSL certificate so your site is served over `https://`.
 
+### AdMob and apex (`app-ads.txt`)
+
+AdMob (and similar tools) often crawl **`https://kavniktech.com/app-ads.txt`** and **`http://kavniktech.com/app-ads.txt`**—the **root / apex** hostname—because that matches the developer website on Google Play. Your repo must keep root **`app-ads.txt`** deployed; that is separate from this DNS/TLS check.
+
+**Quick checks** (run from a terminal; expect **HTTP 200** and your `google.com, pub-…` line for both hosts if apex is healthy):
+
+```bash
+curl -sSI "https://www.kavniktech.com/app-ads.txt"
+curl -sSI "https://kavniktech.com/app-ads.txt"
+```
+
+- If **`www` returns 200** but **`https://kavniktech.com/...` fails** (TLS error, timeout, or not 200), the problem is **not** the text inside `robots.txt` on the repo—it is almost always **apex DNS or the HTTPS certificate** for the apex domain in Netlify (or stale / mixed **A** records at your registrar). AdMob may still show a vague “robots.txt” message when the **HTTPS fetch to apex never succeeds**.
+
+**What to do in Netlify**
+
+1. **Domain management** → confirm both **`kavniktech.com`** and **`www.kavniktech.com`** are added to the **same** site.
+2. **HTTPS** → for the apex domain, use **Verify DNS configuration** / renew **Let’s Encrypt** if Netlify shows a warning.
+3. At your **DNS host** (e.g. Zoho): for `@` / apex, use **only** the **A** (or **ALIAS/ANAME**) records Netlify currently shows—remove old or duplicate apex **A** records that no longer match Netlify’s instructions. Mixed apex IPs can produce **intermittent TLS failures** on `https://kavniktech.com`.
+
+After DNS and HTTPS are green, wait for Google’s recrawl (often hours; sometimes up to about a day) and use AdMob’s recheck for `app-ads.txt`.
+
 ---
 
 ## Option B: Vercel (free)

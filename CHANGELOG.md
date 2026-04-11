@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **`docs/HOSTING_GUIDE.md`** — [AdMob and apex (`app-ads.txt`)](docs/HOSTING_GUIDE.md#admob-and-apex-app-adstxt): how to verify `https://kavniktech.com` vs `www` with `curl`, and Netlify/DNS steps when apex HTTPS fails while `www` works.
 - **`app-ads.txt`** (root) — Restored for AdMob seller verification; Netlify redirect/headers for `/app-ads.txt` and explicit `Google-adstxt` allow in `robots.txt`.
 - **`assets/images/time-date-calc-aviation-ios-icon.png`** — Distinct icon for *Time &amp; Date Calc - Aviation* on iOS cards and app pages.
 - **Theme behavior** — Default follows <code>prefers-color-scheme</code>; header control cycles Automatic → Light → Dark (see <code>assets/js/scripts.js</code>, <code>themePreference</code> in <code>localStorage</code>).

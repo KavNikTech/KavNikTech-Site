@@ -88,6 +88,8 @@ Then open `http://127.0.0.1:8080/`.
 
 See **[docs/HOSTING_GUIDE.md](docs/HOSTING_GUIDE.md)** for Netlify, domain (e.g. Zoho), and deployment notes.
 
+**AdMob / `app-ads.txt`:** Google may verify **`https://kavniktech.com/app-ads.txt`** (apex), not only `www`. If AdMob fails but `www` works in a browser, check **HTTPS on the apex host** and DNS—see [AdMob and apex (`app-ads.txt`)](docs/HOSTING_GUIDE.md#admob-and-apex-app-adstxt) in the hosting guide.
+
 **Do not edit `_redirects` in this repo** unless you fully understand Netlify’s redirect rules (see `.cursorrules`).
 
 ---
