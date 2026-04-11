@@ -17,6 +17,7 @@ KavNikTech-Site/
 ├── CHANGELOG.md               # Release-style change history
 ├── SECURITY.md                # How to report security issues
 ├── robots.txt
+├── app-ads.txt                # AdMob / IAB app-ads seller verification (do not remove)
 ├── sitemap.xml
 ├── .well-known/
 │   └── security.txt          # RFC 9116 — security contact on the live site
@@ -62,6 +63,7 @@ KavNikTech-Site/
 | [docs/SECURITY_CHECK.md](docs/SECURITY_CHECK.md) | Internal checklist for static-site safety. |
 | [sitemap.xml](sitemap.xml) | SEO: canonical URLs for crawlers (update when you add pages). |
 | [robots.txt](robots.txt) | Crawler hints and sitemap location. |
+| [app-ads.txt](app-ads.txt) | AdMob / IAB app-ads seller verification at `/app-ads.txt` (keep deployed; do not delete). |
 | [`.well-known/security.txt`](.well-known/security.txt) | Security contact for researchers (served at `/.well-known/security.txt` in production). |
 
 ---

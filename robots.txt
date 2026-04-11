@@ -1,3 +1,7 @@
+# AdMob / app-ads.txt verification (Google ads.txt crawler)
+User-agent: Google-adstxt
+Allow: /
+
 User-agent: Mediapartners-Google
 Allow: /
 

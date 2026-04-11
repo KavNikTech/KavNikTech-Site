@@ -3,6 +3,11 @@
 
 # Ensure crawlers can always fetch these files at root
 [[redirects]]
+  from = "/app-ads.txt"
+  to = "/app-ads.txt"
+  status = 200
+
+[[redirects]]
   from = "/robots.txt"
   to = "/robots.txt"
   status = 200
@@ -34,6 +39,15 @@
     # Prevent cross-origin isolation attacks
     Cross-Origin-Opener-Policy = "same-origin"
     Cross-Origin-Resource-Policy = "same-origin"
+
+# AdMob / IAB app-ads.txt — plain text, crawlable; relax CORP vs global /* same-origin
+[[headers]]
+  for = "/app-ads.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    Content-Type = "text/plain; charset=utf-8"
+    X-Robots-Tag = "all"
+    Cross-Origin-Resource-Policy = "cross-origin"
 
 [[headers]]
   for = "/robots.txt"

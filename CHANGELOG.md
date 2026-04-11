@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **`app-ads.txt`** (root) — Restored for AdMob seller verification; Netlify redirect/headers for `/app-ads.txt` and explicit `Google-adstxt` allow in `robots.txt`.
 - **`assets/images/time-date-calc-aviation-ios-icon.png`** — Distinct icon for *Time &amp; Date Calc - Aviation* on iOS cards and app pages.
 - **Theme behavior** — Default follows <code>prefers-color-scheme</code>; header control cycles Automatic → Light → Dark (see <code>assets/js/scripts.js</code>, <code>themePreference</code> in <code>localStorage</code>).
 - `CHANGELOG.md`, `SECURITY.md`, README maintenance notes, extended `sitemap.xml`, and **RFC 9116** [`.well-known/security.txt`](.well-known/security.txt).
@@ -16,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - **iOS app hub &amp; learn** — Richer overview (Fuel + Expense Splitter detail), history/Premium sections, <code>og:image</code>; learn TOC and step-by-step Fuel / Expense sections.
 - **Android app hub, learn, Terms** — Fuel Calculator and Expense Splitter documented; Utilities order matches the app (Calculator, Time Zone, Countdown, Expense Splitter); Time Calculators list is Smart Time → Aviation → Fuel.
-- **Public copy cleanup** — No package/bundle IDs or ad publisher lines on marketing pages; generic advertising wording where used; Play Store search links; removed root <code>app-ads.txt</code> and Netlify rules for it; generalized company <code>privacy.html</code> examples.
+- **Public copy cleanup** — No package/bundle IDs or ad publisher lines on marketing pages; generic advertising wording where used; Play Store search links; generalized company <code>privacy.html</code> examples. (<code>app-ads.txt</code> was later restored for AdMob verification.)
 
 ## [2026-04-04]
 
