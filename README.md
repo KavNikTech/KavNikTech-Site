@@ -32,17 +32,21 @@ KavNikTech-Site/
 │   │   ├── demo.html
 │   │   ├── privacy.html
 │   │   └── terms-of-service.html
-│   └── time-date-calc-aviation-ios/  # iOS · Time & Date Calc - Aviation (App Store)
+│   ├── time-date-calc-aviation-ios/  # iOS · Time & Date Calc - Aviation (App Store)
+│   │   ├── index.html
+│   │   ├── learn.html
+│   │   ├── demo.html
+│   │   ├── privacy.html
+│   │   └── terms-of-service.html
+│   └── expenses-ios/           # iOS · Expenses (App Store)
 │       ├── index.html
-│       ├── learn.html
-│       ├── demo.html
 │       ├── privacy.html
 │       └── terms-of-service.html
 │
 ├── assets/
 │   ├── css/styles.css
 │   ├── js/scripts.js
-│   └── images/                # logos, app icons (incl. time-date-calc-aviation-ios-icon.png)
+│   └── images/                # logos, app icons (incl. time-date-calc-aviation-ios-icon.png, expenses-ios-icon.png)
 │
 └── docs/
     ├── HOSTING_GUIDE.md

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy policy — Expenses (iOS)</title>
+  <meta name="description" content="Privacy policy for Expenses on iOS — SwiftData, app group receipts, optional iCloud (CloudKit), Frankfurter FX hints, StoreKit, and on-device AI." />
+  <link rel="canonical" href="https://www.kavniktech.com/apps/expenses-ios/privacy.html" />
+  <link rel="icon" href="../../assets/images/kavnik-technologies-logo.png" type="image/png" />
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=4">
+</head>
+<body class="nk-root">
+  <header class="nk-header">
+    <div class="nk-container">
+      <a class="nk-logo" href="../../index.html">
+        <img src="../../assets/images/kavnik-technologies-logo.png" alt="KavNik Technologies" class="nk-logo-img" width="40" height="40">
+        <span class="nk-logo-text">KavNik Technologies</span>
+      </a>
+      <nav class="nk-nav">
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../index.html">Apps</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../privacy.html">Privacy</a>
+      </nav>
+      <button class="nk-theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="nk-nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="nk-section nk-apps">
+      <div class="nk-container nk-card fade-in">
+        <h1>Privacy Policy — Expenses (iOS)</h1>
+        <p class="muted">Last updated: May 2026</p>
+        <p class="app-platform-label" style="margin-bottom: 24px;">iOS · iPhone &amp; iPad</p>
+
+        <nav class="app-subnav" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
+          <a href="index.html" class="btn outline">App overview</a>
+          <a href="terms-of-service.html" class="btn outline">Terms of use / EULA</a>
+        </nav>
+
+        <h2>Summary</h2>
+        <p><strong>Expenses</strong> (bundle <code>com.kavniktech.expensesplitter</code>) stores your ledgers, spaces, EMI plans, and related metadata primarily in <strong>SwiftData on device</strong>. KavNik Technologies Pvt Ltd does <strong>not</strong> operate our own cloud database that receives your expense rows as part of ordinary use.</p>
+        <p>If you enable <strong>iCloud sync</strong>, eligible data syncs through <strong>Apple CloudKit</strong> to the app’s <strong>private CloudKit database</strong> (<code>iCloud.com.kavniktech.expensesplitter</code>), subject to your Apple ID and iCloud settings. Personal travel content follows private-first sharing rules in the app.</p>
+        <p>Receipt images are stored as files under the app’s <strong>App Group</strong> container (<code>group.com.kavniktech.expensesplitter</code>) and referenced from models—not shipped as oversized inline blobs.</p>
+
+        <h2>Optional exchange-rate hints (Frankfurter)</h2>
+        <p>For non–base-currency flows, the app may request indicative rates from the public <strong>Frankfurter</strong> API (<a href="https://api.frankfurter.app" target="_blank" rel="noopener noreferrer">api.frankfurter.app</a>). Those requests are typically limited to currency identifiers and dates needed for conversion hints; see Frankfurter’s documentation for their handling of logs or IP data.</p>
+
+        <h2>Apple Intelligence / on-device models</h2>
+        <p>AI Spending Insights features may use <strong>on-device processing</strong> and, where available, Apple’s frameworks for natural language and generation. Processing is governed by Apple’s system behavior and your device settings. KavNik does not operate a KavNik-owned server that stores your full Q&amp;A transcripts for that flow.</p>
+
+        <h2>Widgets and Siri / Shortcuts</h2>
+        <p>The Home Screen <strong>widget</strong> reads rollup snapshot values the main app publishes into the App Group. <strong>Siri, Shortcuts, and App Intents</strong> run on device; phrases you configure may send structured fields you supply into the app.</p>
+
+        <h2>Invites and deep links</h2>
+        <p>Shared-space invites may use a custom URL scheme (<code>expensesplitter://…</code>). Opening a link launches the app locally; KavNik does not need to host invite payloads on KavNik servers for basic scheme handling.</p>
+
+        <h2>In-app purchases</h2>
+        <p>Subscriptions and lifetime unlock for <em>Expense Tracker and Splitter Pro</em> are processed by <strong>Apple StoreKit</strong>. Apple handles payment data. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple’s Privacy Policy</a> for purchase-related processing.</p>
+
+        <h2>Advertising</h2>
+        <p>Some builds may include layout space reserved for optional third-party banners. If a shipped build shows ads, network providers may process device or interaction data under their policies—describe that accurately on the App Store and here. Do not rely on this page alone if the live product changes.</p>
+
+        <h2>Permissions</h2>
+        <p>Features such as receipt capture, voice entry, contacts-backed names, and Siri may request <strong>Camera</strong>, <strong>Photo Library</strong>, <strong>Contacts</strong>, <strong>Microphone</strong>, <strong>Speech Recognition</strong>, or related capabilities. Prompts and usage strings in the submitted Info.plist are authoritative.</p>
+
+        <h2>Children’s privacy</h2>
+        <p>The app is a general-purpose finance utility. We do not knowingly collect personal information from children beyond what Apple’s platforms, optional ads, or your own entries provide.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>We may update this policy when features or regulations change. The “Last updated” date will change when we do.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this app policy: <a href="mailto:support@kavniktech.com">support@kavniktech.com</a> or our <a href="../../contact.html">contact page</a>.</p>
+
+        <p style="margin-top: 24px;">For the company website policy, see <a href="../../privacy.html">KavNik Technologies Privacy Policy</a>.</p>
+
+        <p style="margin-top: 24px;"><a href="index.html" class="btn outline">← Back to app overview</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nk-footer">
+    <div class="nk-container nk-footer-grid">
+      <div>© 2026 KavNik Technologies Pvt Ltd</div>
+      <nav class="nk-footer-nav">
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../index.html">Apps</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../../assets/js/scripts.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expenses (iOS) — KavNik Technologies</title>
+  <meta name="description" content="Expenses for iPhone and iPad — personal and shared money in one place: group splits, monthly My Expenses rollups, EMI and subscriptions, receipts, optional iCloud sync, Home Screen widget, and Siri / Shortcuts—with Pro unlocking the full AI Spending Insights coach." />
+  <link rel="canonical" href="https://www.kavniktech.com/apps/expenses-ios/index.html" />
+  <link rel="icon" href="../../assets/images/kavnik-technologies-logo.png" type="image/png" />
+  <meta property="og:url" content="https://www.kavniktech.com/apps/expenses-ios/index.html" />
+  <meta property="og:title" content="Expenses (iOS) — KavNik Technologies" />
+  <meta property="og:description" content="Native SwiftUI app: split trips and household costs, monthly rollups, EMI, receipts, widget, Shortcuts, optional iCloud—and Pro for the full AI Spending coach." />
+  <meta property="og:image" content="https://www.kavniktech.com/assets/images/expenses-ios-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Expenses (iOS) — KavNik Technologies" />
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=4">
+</head>
+<body class="nk-root">
+  <header class="nk-header">
+    <div class="nk-container">
+      <a class="nk-logo" href="../../index.html">
+        <img src="../../assets/images/kavnik-technologies-logo.png" alt="KavNik Technologies" class="nk-logo-img" width="40" height="40">
+        <span class="nk-logo-text">KavNik Technologies</span>
+      </a>
+      <nav class="nk-nav">
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../index.html">Apps</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../privacy.html">Privacy</a>
+      </nav>
+      <button class="nk-theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="nk-nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="nk-section nk-apps">
+      <div class="nk-container nk-card fade-in">
+        <p class="app-platform-label" style="margin-bottom: 16px;">iOS · iPhone &amp; iPad (universal SwiftUI app; widget extension)</p>
+        <div class="app-detail-header" style="display: flex; align-items: center; gap: 24px; margin-bottom: 24px;">
+          <img src="../../assets/images/expenses-ios-icon.png" alt="Expenses app icon" width="80" height="80" style="border-radius: 18px;">
+          <div>
+            <h1 style="margin: 0 0 8px;">Expenses</h1>
+            <p class="muted" style="margin: 0;">Personal and shared money in one place: split group trips and household costs, roll up the month in <strong>My Expenses</strong>, track EMI and subscriptions, attach receipts, optional iCloud sync, a Home Screen widget, and Siri / Shortcuts for quick entry—with <strong>Expense Tracker and Splitter Pro</strong> unlocking the full <strong>AI Spending Insights</strong> coach.</p>
+          </div>
+        </div>
+
+        <nav class="app-subnav" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
+          <a href="https://apps.apple.com/search?term=Expenses%20KavNik" class="btn primary" target="_blank" rel="noopener noreferrer">App Store</a>
+          <a href="privacy.html" class="btn outline">Privacy policy</a>
+          <a href="terms-of-service.html" class="btn outline">Terms of use / EULA</a>
+          <a href="../../contact.html" class="btn outline">Send feedback</a>
+        </nav>
+
+        <h2>Overview</h2>
+        <p><strong>Expenses</strong> is a native Swift / SwiftUI app for people who need clear group math and a monthly personal view at the same time. It is built around a <strong>home hub</strong> with cards—not a single giant ledger—so you open the mode that matches real life: <strong>My Expenses</strong> (monthly rollup and charts), <strong>Expense Splitter</strong> (trips and parties), <strong>Roommates</strong> (household), <strong>Couple</strong> (two-person shared), <strong>Personal Travel</strong> (private trip ledger), and <strong>EMI / Subscriptions</strong> (loans and recurring plans with reminders). <strong>Settings</strong> (gear) sits at the top-right from the hub.</p>
+        <p>On first launch, full-screen onboarding walks through the value proposition and ends on personalization: <strong>display name</strong>, <strong>base currency</strong>, an optional <strong>Contacts</strong> pick for the name, an optional <strong>iCloud</strong> (private sync) toggle, and a choice to start fresh or load demo data.</p>
+        <p><strong>Data posture:</strong> Core data lives in <strong>SwiftData</strong> on your device. Receipt JPEGs are stored under the <strong>app group</strong> (<code>group.com.kavniktech.expensesplitter</code>), linked from expenses—not embedded as large blobs inside every model. If you turn on sync, the app targets Apple’s <strong>private CloudKit database</strong> (<code>iCloud.com.kavniktech.expensesplitter</code>) for eligible content; personal travel is treated as private-first for sharing semantics. For non–base-currency hints, exchange-rate lookups may call the <strong>Frankfurter</strong> public API (<a href="https://api.frankfurter.app" target="_blank" rel="noopener noreferrer">api.frankfurter.app</a>)—see <a href="privacy.html">Privacy policy</a> if you describe third-party processing on your listing.</p>
+        <p><strong>Premium:</strong> <em>Expense Tracker and Splitter Pro</em> (StoreKit&nbsp;2) unlocks the full <strong>AI Spending Insights</strong> / Spending Coach experience. Free users still see AI insight teaser cards on My Expenses; the dedicated coach and Q&amp;A flow is paywalled behind Pro. <strong>Settings</strong> includes Go Premium, Restore purchases, and subscription management when you are not entitled.</p>
+        <p>Some builds include layout hooks that <strong>may reserve space for optional banner areas</strong> in the tab interface; only claim “ads” or “ad-free” on your store page if that matches the binary you ship.</p>
+
+        <h2>Navigation (as in the app)</h2>
+        <ul>
+          <li><strong>Home hub</strong> — Welcome plus grid: <em>My Expenses</em>, <em>Expense Splitter</em> (trips/parties), <em>Roommates</em>, <em>Couple</em>, <em>Personal Travel</em>, <em>EMI / Subscriptions</em>. <strong>Settings</strong> (gear) top-right.</li>
+          <li><strong>My Expenses</strong> — Month navigator; donut chart(s) with paging between daily/misc slices and broader “all expenses” composition; metrics for cash paid, fixed costs, and income/savings when enabled; entry to <strong>AI Spending Insights</strong> (Pro unlocks the full coach); navigation to <strong>Income &amp; budget</strong> for the selected month; add personal expense flows including voice and categories.</li>
+          <li><strong>Space list</strong> — Filtered by space kind: Trip/Party, Roommates, Couple, Personal travel.</li>
+          <li><strong>Space editor / trip detail</strong> — Participants (including Contacts-backed add where used), expenses, categories, paid-with / card nicknames, receipts, iCloud share for shared spaces, export JSON/CSV, calculator / result / settle-up presentation, calculation history.</li>
+          <li><strong>EMI / Subscriptions</strong> — Loans vs subscription-style presets, next due, reminders via local notifications, optional receipts.</li>
+          <li><strong>Settings</strong> — Profile (display name, Photos picker and avatar crop), base currency, rollup and income toggles as enabled in your build, appearance (theme), iCloud diagnostics (store mode, migration summary, row counts), haptics and sounds, voice auto-save, date/time/week preferences, diagnostics section for local event counters, version, privacy copy, and the Premium block when not entitled.</li>
+        </ul>
+
+        <h2>Core features</h2>
+
+        <h3>My Expenses (monthly rollup)</h3>
+        <ul>
+          <li>Unified month view combining personal daily spends, included shared spaces (trips, roommates, couple, personal travel, misc—controlled by inclusion settings), EMI/subscription rollups, and budget/income rows when you use them.</li>
+          <li>Donut charts plus a second donut page for broader “all expenses” composition.</li>
+          <li>AI insight cards on the hub for quick takeaways; full <strong>Spending Coach</strong> with <em>Ask My Expenses</em> Q&amp;A for Pro (on-device Apple Intelligence where available).</li>
+          <li>Income &amp; budget deep link for the selected month.</li>
+        </ul>
+
+        <h3>Expense Splitter (shared spaces)</h3>
+        <ul>
+          <li>Space kinds: Trip/Party, Roommates, Couple, Personal travel.</li>
+          <li>Per space: participants, expenses (payer, amount, category, note, date), category profiles, receipt capture or photo-library attach, smart receipt hints where Vision is used.</li>
+          <li>Calculate balances and settle-up style results; history of snapshots.</li>
+          <li>Invite deep links via custom URL scheme <code>expensesplitter://invite?payload=…</code>.</li>
+          <li>Export and import JSON and CSV.</li>
+        </ul>
+
+        <h3>EMI &amp; subscriptions</h3>
+        <ul>
+          <li>Track loans and subscription-style bills, next due dates, and reminders through local notifications; receipts optional.</li>
+        </ul>
+
+        <h3>Receipts</h3>
+        <ul>
+          <li>Receipts are saved under app group storage and linked from personal expenses, trip expenses, and EMI where implemented.</li>
+        </ul>
+
+        <h3>Widget</h3>
+        <ul>
+          <li>The WidgetKit extension reads a rollup snapshot from shared app group keys: month title, cash paid, totals with EMI breakdown, and income/savings/remaining when published by the app.</li>
+        </ul>
+
+        <h3>Siri, Shortcuts, App Intents</h3>
+        <ul>
+          <li>Registered phrases include quick voice expense entry, natural-language style expense logging, category-parameterized logging, trip expenses, and logging EMI—see the live app’s Shortcuts library for exact titles.</li>
+        </ul>
+
+        <h2>URL / deep linking</h2>
+        <p>Custom URL scheme: <code>expensesplitter</code> (for example invites). <code>CFBundleURLTypes</code> includes the name <code>com.kavniktech.expensesplitter</code> in the app’s Info.plist.</p>
+
+        <h2>Permissions (marketing copy should match Info.plist)</h2>
+        <p>The app may request capabilities reflected in usage descriptions on the App Store build, including where applicable: <strong>Camera</strong>, <strong>Photo Library</strong> (add and read), <strong>Contacts</strong> (when picking someone), <strong>Microphone</strong>, <strong>Speech Recognition</strong>, and <strong>Siri</strong>—always compare this page to the live plist text before publishing.</p>
+
+        <h2>Free vs Premium</h2>
+        <p><strong>Free</strong> (as you ship): core splitting, My Expenses rollups, EMI, receipts, widget snapshot data when used, exports, and Shortcuts integrations.</p>
+        <p><strong>Pro — Expense Tracker and Splitter Pro:</strong> unlocks the full <strong>AI Spending Insights</strong> / Spending Coach experience (full-screen coach and Q&amp;A). Restore and subscription management are available from Settings.</p>
+        <p>Do not promise “removes ads” on this marketing page unless your live App Store binary matches; the codebase includes tab-bar inset hooks for optional banners only.</p>
+
+        <h2>In-app purchases (StoreKit)</h2>
+        <p>Purchases are processed by <strong>Apple</strong> via StoreKit&nbsp;2. Product identifiers (subject to App Store Connect): <code>Expense_Tracker_Splitter_Premium_Monthly</code>, <code>Expense_Tracker_Splitter_Premium_Yearly</code>, <code>Expense_Tracker_Splitter_Premium_Lifetime</code>. Plan names and prices appear in the app and on the App Store listing by region.</p>
+
+        <h2>Support &amp; trust</h2>
+        <p>Use <strong>Send feedback</strong> from the app when available, email <a href="mailto:support@kavniktech.com">support@kavniktech.com</a>, or our <a href="../../contact.html">contact page</a>. Keep your App Store privacy labels aligned with CloudKit, the app group, Frankfurter rate requests, and on-device / Apple Intelligence processing—this site’s <a href="privacy.html">app privacy policy</a> and <a href="terms-of-service.html">terms</a> are written for that stack (not as a permanent substitute for Apple’s corporate pages alone).</p>
+
+        <p><strong>Also available:</strong> <a href="../time-date-calc-aviation-ios/index.html">Time &amp; Date Calc - Aviation (iOS)</a> (<a href="https://www.kavniktech.com/apps/time-date-calc-aviation-ios/index.html" target="_blank" rel="noopener noreferrer">https://www.kavniktech.com/apps/time-date-calc-aviation-ios/index.html</a>).</p>
+
+        <p style="margin-top: 24px;"><a href="../index.html" class="btn outline">← Back to all apps</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nk-footer">
+    <div class="nk-container nk-footer-grid">
+      <div>© 2026 KavNik Technologies Pvt Ltd</div>
+      <nav class="nk-footer-nav">
+        <a href="../../index.html">Home</a>
+        <a href="../../about.html">About</a>
+        <a href="../index.html">Apps</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="../../privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../../assets/js/scripts.js?v=6"></script>
+</body>
+</html>
