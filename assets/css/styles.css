@@ -1304,3 +1304,21 @@ body::before {
 .mb-4 {
   margin-bottom: 32px;
 }
+
+/* ===== Dark mode: prose link contrast (light theme unchanged) ===== */
+[data-theme="dark"] main a:not(.btn):not(.nk-logo):not(.app-card) {
+  color: #facc15;
+}
+
+[data-theme="dark"] main a:not(.btn):not(.nk-logo):not(.app-card):visited {
+  color: #39ff14;
+}
+
+[data-theme="dark"] main a:not(.btn):not(.nk-logo):not(.app-card):hover {
+  color: #fef9c3;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] main a:not(.btn):not(.nk-logo):not(.app-card):visited:hover {
+  color: #86efac;
+}

@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Privacy policy — Expenses (iOS)</title>
-  <meta name="description" content="Privacy policy for Expenses on iOS — SwiftData, app group receipts, optional iCloud (CloudKit), Frankfurter FX hints, StoreKit, and on-device AI." />
+  <meta name="description" content="Privacy policy for Expenses on iOS — on-device storage, optional iCloud sync, receipts, exchange-rate hints, purchases through Apple, and on-device intelligence." />
   <link rel="canonical" href="https://www.kavniktech.com/apps/expenses-ios/privacy.html" />
   <link rel="icon" href="../../assets/images/kavnik-technologies-logo.png" type="image/png" />
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=5">
 </head>
 <body class="nk-root">
   <header class="nk-header">
@@ -37,37 +37,34 @@
 
         <nav class="app-subnav" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
           <a href="index.html" class="btn outline">App overview</a>
-          <a href="terms-of-service.html" class="btn outline">Terms of use / EULA</a>
+          <a href="terms-of-service.html" class="btn outline">Terms of use</a>
         </nav>
 
         <h2>Summary</h2>
-        <p><strong>Expenses</strong> (bundle <code>com.kavniktech.expensesplitter</code>) stores your ledgers, spaces, EMI plans, and related metadata primarily in <strong>SwiftData on device</strong>. KavNik Technologies Pvt Ltd does <strong>not</strong> operate our own cloud database that receives your expense rows as part of ordinary use.</p>
-        <p>If you enable <strong>iCloud sync</strong>, eligible data syncs through <strong>Apple CloudKit</strong> to the app’s <strong>private CloudKit database</strong> (<code>iCloud.com.kavniktech.expensesplitter</code>), subject to your Apple ID and iCloud settings. Personal travel content follows private-first sharing rules in the app.</p>
-        <p>Receipt images are stored as files under the app’s <strong>App Group</strong> container (<code>group.com.kavniktech.expensesplitter</code>) and referenced from models—not shipped as oversized inline blobs.</p>
+        <p><strong>Expenses</strong> stores your ledgers, spaces, EMI plans, and related metadata <strong>on your device</strong>. KavNik Technologies Pvt Ltd does <strong>not</strong> operate our own cloud database that receives your expense rows as part of ordinary use.</p>
+        <p>If you enable <strong>iCloud sync</strong>, eligible data syncs through <strong>Apple’s iCloud</strong> (private database for this app), subject to your Apple ID and iCloud settings. Personal travel content follows private-first sharing rules in the app.</p>
+        <p>Receipt images are stored as files in <strong>shared on-device storage</strong> (shared with the Home Screen widget where used) and referenced from your data—not embedded as oversized blobs inside every line item.</p>
 
         <h2>Optional exchange-rate hints (Frankfurter)</h2>
         <p>For non–base-currency flows, the app may request indicative rates from the public <strong>Frankfurter</strong> API (<a href="https://api.frankfurter.app" target="_blank" rel="noopener noreferrer">api.frankfurter.app</a>). Those requests are typically limited to currency identifiers and dates needed for conversion hints; see Frankfurter’s documentation for their handling of logs or IP data.</p>
 
-        <h2>Apple Intelligence / on-device models</h2>
-        <p>AI Spending Insights features may use <strong>on-device processing</strong> and, where available, Apple’s frameworks for natural language and generation. Processing is governed by Apple’s system behavior and your device settings. KavNik does not operate a KavNik-owned server that stores your full Q&amp;A transcripts for that flow.</p>
+        <h2>On-device intelligence</h2>
+        <p>AI Spending Insights features may use <strong>on-device processing</strong> and, where available, Apple’s system features for language and generation. Processing follows Apple’s behavior and your device settings. KavNik does not operate a KavNik-owned server that stores your full Q&amp;A transcripts for that flow.</p>
 
         <h2>Widgets and Siri / Shortcuts</h2>
-        <p>The Home Screen <strong>widget</strong> reads rollup snapshot values the main app publishes into the App Group. <strong>Siri, Shortcuts, and App Intents</strong> run on device; phrases you configure may send structured fields you supply into the app.</p>
+        <p>The Home Screen <strong>widget</strong> reads rollup snapshot values the main app publishes into shared storage. <strong>Siri and Shortcuts</strong> run on device; phrases you configure may pass the fields you supply into the app.</p>
 
         <h2>Invites and deep links</h2>
-        <p>Shared-space invites may use a custom URL scheme (<code>expensesplitter://…</code>). Opening a link launches the app locally; KavNik does not need to host invite payloads on KavNik servers for basic scheme handling.</p>
+        <p>Shared-space invites may use links that open the app on the recipient’s device. KavNik does not need to host invite payloads on KavNik servers for that basic behavior.</p>
 
         <h2>In-app purchases</h2>
-        <p>Subscriptions and lifetime unlock for <em>Expense Tracker and Splitter Pro</em> are processed by <strong>Apple StoreKit</strong>. Apple handles payment data. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple’s Privacy Policy</a> for purchase-related processing.</p>
-
-        <h2>Advertising</h2>
-        <p>Some builds may include layout space reserved for optional third-party banners. If a shipped build shows ads, network providers may process device or interaction data under their policies—describe that accurately on the App Store and here. Do not rely on this page alone if the live product changes.</p>
+        <p>Subscriptions and lifetime unlock for <em>Expense Tracker and Splitter Pro</em> are processed by <strong>Apple</strong> (in-app purchases). Apple handles payment data. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple’s Privacy Policy</a> for purchase-related processing.</p>
 
         <h2>Permissions</h2>
-        <p>Features such as receipt capture, voice entry, contacts-backed names, and Siri may request <strong>Camera</strong>, <strong>Photo Library</strong>, <strong>Contacts</strong>, <strong>Microphone</strong>, <strong>Speech Recognition</strong>, or related capabilities. Prompts and usage strings in the submitted Info.plist are authoritative.</p>
+        <p>Features such as receipt capture, voice entry, names from Contacts, and Siri may request <strong>Camera</strong>, <strong>Photo Library</strong>, <strong>Contacts</strong>, <strong>Microphone</strong>, <strong>Speech Recognition</strong>, or related capabilities. The permission text on your App Store listing and on-device prompts are authoritative.</p>
 
         <h2>Children’s privacy</h2>
-        <p>The app is a general-purpose finance utility. We do not knowingly collect personal information from children beyond what Apple’s platforms, optional ads, or your own entries provide.</p>
+        <p>The app is a general-purpose finance utility. We do not knowingly collect personal information from children beyond what Apple’s platforms or your own entries provide.</p>
 
         <h2>Changes to this policy</h2>
         <p>We may update this policy when features or regulations change. The “Last updated” date will change when we do.</p>
