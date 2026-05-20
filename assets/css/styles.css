@@ -410,6 +410,25 @@ body::before {
   font-size: 0.875rem;
 }
 
+/* App detail subnav — keep CTAs on one row; scroll horizontally if needed */
+.app-subnav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.app-subnav .btn {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
 /* ===== Device Mockups ===== */
 .nk-hero-mockup {
   animation: fadeInRight 1s var(--transition-bounce) 0.2s both;
