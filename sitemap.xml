@@ -86,6 +86,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.kavniktech.com/apps/expenses-ios/learn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.kavniktech.com/apps/expenses-ios/demo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.kavniktech.com/apps/expenses-ios/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

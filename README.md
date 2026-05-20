@@ -38,8 +38,10 @@ KavNikTech-Site/
 │   │   ├── demo.html
 │   │   ├── privacy.html
 │   │   └── terms-of-service.html
-│   └── expenses-ios/           # iOS · Expenses (App Store)
+│   └── expenses-ios/           # iOS · Expenses Tracker & Splitter (App Store)
 │       ├── index.html
+│       ├── learn.html
+│       ├── demo.html
 │       ├── privacy.html
 │       └── terms-of-service.html
 │
